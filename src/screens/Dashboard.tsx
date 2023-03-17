@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from "react";
-import { motion } from "framer-motion";
-import ThemeContext from "../context/ThemeContext";
+import React, { useContext, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import ThemeContext from '../context/ThemeContext';
 
 export const Dashboard = () => {
   const {
@@ -21,13 +21,13 @@ export const Dashboard = () => {
       transition: {
         delay: 0.9,
         duration: 1.5,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
     exit: {
-      y: "-100vw",
+      y: '-100vw',
       transition: {
-        ease: "easeInOut",
+        ease: 'easeInOut',
         delay: 1.5,
         duration: 1.5,
       },
@@ -41,9 +41,9 @@ export const Dashboard = () => {
   };
 
   useEffect(() => {
-    let x: any = document.getElementById("app") as HTMLInputElement;
+    let x: any = document.getElementById('app') as HTMLInputElement;
     x.style.backgroundImage = styles.container.backgroundImage;
-    console.log("color changed");
+    console.log('color changed');
   }, [color1, color2]);
   return (
     <motion.div
@@ -53,7 +53,7 @@ export const Dashboard = () => {
       animate="visible"
       exit="exit"
     >
-      <form>
+      {/* <form>
         <div>
           <label>
             Color 1
@@ -98,7 +98,8 @@ export const Dashboard = () => {
             reset
           </motion.button>
         </div>
-      </form>
+      </form> */}
+      <h3 style={{ color: 'yellow' }}>Nothing happens here yet!</h3>
     </motion.div>
   );
 };

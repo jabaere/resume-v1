@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { links } from "../api/data";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { links } from '../api/data';
 export const Projects = () => {
   const container = {
     initial: {
@@ -11,13 +11,13 @@ export const Projects = () => {
       transition: {
         delay: 0.9,
         duration: 1.5,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
     exit: {
-      y: "-100vw",
+      y: '-100vw',
       transition: {
-        ease: "easeInOut",
+        ease: 'easeInOut',
         delay: 1.5,
         duration: 1.5,
       },
@@ -25,20 +25,20 @@ export const Projects = () => {
   };
   const aTag = {
     initial: {
-      color: "whitesmoke",
+      color: 'whitesmoke',
     },
     hover: {
-      color: "#0f0f0f",
+      color: '#0f0f0f',
     },
     hidden: {
-      color: "whitesmoke",
+      color: 'whitesmoke',
     },
   };
 
   const liTag = {
     visible: (i: number) => ({
       opacity: 1,
-      listStyleType: "none",
+      listStyleType: 'none',
       lineHeight: 2,
 
       transition: {
@@ -47,17 +47,17 @@ export const Projects = () => {
     }),
     hidden: {
       opacity: 0,
-      listStyleType: "none",
+      listStyleType: 'none',
       lineHeight: 0.5,
-      background: "inherit",
+      background: 'inherit',
     },
     hover: {
       scale: 1.2,
       originX: 0,
-      background: "#f8e112",
+      background: '#f8e112',
 
       transition: {
-        type: "spring",
+        type: 'spring',
         stiffness: 200,
       },
     },

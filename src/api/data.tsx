@@ -46,7 +46,7 @@ export const projects = [
     year: 2023,
     name: 'Fun Page',
     techniques: 'React/React Three Fiber/GLSL/Shaders',
-    source: 'https://github.com/jabaere/landing-page',
+    source: 'https://github.com/jabaere/read-in-three',
   },
   {
     year: 2023,
@@ -54,12 +54,7 @@ export const projects = [
     techniques: 'Javascript/css',
     source: 'https://github.com/jabaere/landing-page',
   },
-  {
-    year: 2023,
-    name: 'Landing Page',
-    techniques: 'Javascript/css',
-    source: 'https://github.com/jabaere/landing-page',
-  },
+
   {
     year: 2022,
     name: 'Landing Page',

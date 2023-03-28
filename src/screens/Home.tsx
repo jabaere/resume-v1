@@ -110,7 +110,7 @@ export const Home = () => {
     >
       <Canvas
         style={{ height: width < 630 ? '100vh' : '93vh' }}
-        camera={{ position: [8, -5, 11], fov: 75, near: 1, far: 1000 }}
+        camera={{ position: [9, -5, 10], fov: 75, near: 1, far: 1000 }}
       >
         {/* <color attach="background" args={["#000"]} /> */}
         <ambientLight intensity={1} />

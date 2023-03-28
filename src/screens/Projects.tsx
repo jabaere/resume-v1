@@ -19,7 +19,7 @@ export const Projects = () => {
       transition: {
         ease: 'easeInOut',
         delay: 1.5,
-        duration: 1.5,
+        duration: 0.5,
       },
     },
   };

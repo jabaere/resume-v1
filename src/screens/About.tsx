@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { skills } from "../api/data";
-import DownloadButton from "../components/downloadButton";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { skills } from '../api/data';
+import DownloadButton from '../components/downloadButton';
 export const About = () => {
   const container = {
     initial: {
@@ -12,15 +12,15 @@ export const About = () => {
       transition: {
         delay: 0.9,
         duration: 1.5,
-        ease: "easeOut",
+        ease: 'easeOut',
       },
     },
     exit: {
-      y: "-100vw",
+      y: '-100vw',
       transition: {
-        ease: "easeInOut",
+        ease: 'easeInOut',
         delay: 1.5,
-        duration: 1.5,
+        duration: 0.5,
       },
     },
   };
@@ -28,9 +28,9 @@ export const About = () => {
   const aboutVariants = {
     visible: {
       opacity: 0.5,
-      color: "#DFFF00",
+      color: '#DFFF00',
       letterSpacing: 5,
-      listStyleType: "none",
+      listStyleType: 'none',
       transition: {
         delay: 2,
       },
@@ -42,8 +42,8 @@ export const About = () => {
   const skillsVariants = {
     visible: {
       opacity: 0.5,
-      color: "#DFFF00",
-      listStyleType: "none",
+      color: '#DFFF00',
+      listStyleType: 'none',
       transition: {
         delay: 2,
       },
@@ -60,7 +60,7 @@ export const About = () => {
       animate="visible"
       exit="exit"
     >
-      <div style={{ display: "flex", flexDirection: "column", margin: 30 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', margin: 30 }}>
         <DownloadButton
           file_name="udemy sertificate"
           buttonTitle="Download sertificate"
@@ -73,7 +73,7 @@ export const About = () => {
         />
       </div>
       <div>
-        <h1 id="present_title" style={{ color: "yellow" }}>
+        <h1 id="present_title" style={{ color: 'yellow' }}>
           Hello My name is jaba
         </h1>
         <motion.p
@@ -91,8 +91,8 @@ export const About = () => {
           really enjoy doing. <br />
           My hobby is create reusable components.
         </motion.p>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <h3 style={{ color: "yellow" }}>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <h3 style={{ color: 'yellow' }}>
             here are some techniques which I have touched on in
           </h3>
           <div id="skills_container">

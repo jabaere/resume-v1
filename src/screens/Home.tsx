@@ -8,10 +8,18 @@ import {
   Environment,
   Float,
   Cloud,
+  Stage,
+  Sky,
+  Stars,
+  OrbitControls,
+  PositionalAudio,
 } from '@react-three/drei';
 
-import { Dragon } from '../models/Dragon';
+import useWindowDimensions from '../components/getWindowDimensions';
 
+import { Dragon } from '../models/Dragon';
+import { Forest } from '../models/Forest';
+import ForestSound from '../sound/Forest-campfire.mp3';
 import {
   Bloom,
   EffectComposer,
@@ -21,6 +29,7 @@ import {
 import { CirclesWithBar } from 'react-loader-spinner';
 
 export const Home = () => {
+  const { width } = useWindowDimensions();
   const container = {
     initial: {
       opacity: 0,
@@ -38,7 +47,7 @@ export const Home = () => {
       transition: {
         ease: 'easeInOut',
         delay: 1.5,
-        duration: 1.5,
+        duration: 0.5,
       },
     },
   };
@@ -99,7 +108,10 @@ export const Home = () => {
         )
       }
     >
-      <Canvas style={{ height: '92vh' }}>
+      <Canvas
+        style={{ height: width < 630 ? '100vh' : '93vh' }}
+        camera={{ position: [8, -5, 11], fov: 75, near: 1, far: 1000 }}
+      >
         {/* <color attach="background" args={["#000"]} /> */}
         <ambientLight intensity={1} />
         <spotLight
@@ -110,7 +122,7 @@ export const Home = () => {
           intensity={1}
           shadow-bias={-0.0001}
         />
-        <Environment preset="warehouse" />
+
         {/* add effects */}
         <EffectComposer>
           <Bloom
@@ -119,12 +131,7 @@ export const Home = () => {
             luminanceSmoothing={0.9} //0.9
             height={1000}
           />
-          <DepthOfField
-            focusDistance={0}
-            focalLength={0.02}
-            bokehScale={1}
-            height={400}
-          />
+
           <Vignette offset={0.1} darkness={1.5} eskil={false} />
         </EffectComposer>
         <ScrollControls
@@ -134,30 +141,26 @@ export const Home = () => {
         >
           <Scroll>
             {/* top */}
-            <Float
+            <Stars
+              radius={100}
+              depth={50}
+              count={5000}
+              factor={4}
+              saturation={0}
+              fade
               speed={1}
-              rotationIntensity={2}
-              floatIntensity={0.2}
-              floatingRange={[1, 12]}
-            >
-              <Dragon scale={1.8} position={[0, -7.5, 0]} />
-            </Float>
-            {/* bottom */}
-            {/* <Float
-            speed={1}
-            rotationIntensity={2}
-            floatIntensity={0.2}
-            floatingRange={[1, 1]}
-          >
-            <Dragon scale={1.5} position={[-3, -8.5, 0]} />
-          </Float> */}
-            <Cloud
-              opacity={0.2}
-              speed={0.4} // Rotation speed
-              width={7} // Width of the full cloud
-              depth={0.5} // Z-dir depth
-              segments={3} // Number of particles
             />
+            <Forest position={[0, 0, 1]} scale={1.5} />
+            <OrbitControls
+              makeDefault
+              minAzimuthAngle={0}
+              maxAzimuthAngle={Math.PI / 4}
+              minPolarAngle={Math.PI / 5}
+              maxPolarAngle={Math.PI / 3}
+              enableZoom={false}
+              enablePan={false}
+            />
+            <PositionalAudio autoplay loop url={ForestSound} distance={20} />
           </Scroll>
 
           <Scroll html>
@@ -168,7 +171,11 @@ export const Home = () => {
               animate="visible"
               exit="exit"
             >
-              <img src="https://www.codewars.com/users/jabjab/badges/micro" />
+              <img
+                src="https://www.codewars.com/users/jabjab/badges/micro"
+                style={{ position: 'fixed', top: 10, left: 10 }}
+              />
+
               <motion.div
                 id="home_title"
                 animate={{ fontSize: 50, color: '#f8e112' }}
@@ -180,11 +187,14 @@ export const Home = () => {
                   when: 'beforeChildren',
                 }}
               >
-                <h1 id="home_welcome_title">Welcome</h1>
+                <h1 id="home_welcome_title" style={{ userSelect: 'none' }}>
+                  Welcome
+                </h1>
                 <motion.p
                   animate={{ fontSize: 30, color: '#FFD700', opacity: 0.3 }}
                   transition={{ delay: 2.5, duration: 1.5, ease: 'easeOut' }}
                   id="home_welcome_sub_title"
+                  style={{ userSelect: 'none' }}
                 >
                   here is everything about me
                 </motion.p>

@@ -179,6 +179,46 @@ button {
   color: transparent;
 }
 
+.modal {
+  width: 95vw;
+  height: 90vh;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: end;
+  z-index: 9999999999;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+}
+
+.home__left-side-bar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.modal__hide {
+  display: none;
+  z-index: 0;
+}
+.modal__show {
+  display: flex;
+
+  z-index: 9999999999;
+  opacity: 0.5;
+}
+
+.modal__close-button {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* -----cv----- */
 
 /* -----about----- */

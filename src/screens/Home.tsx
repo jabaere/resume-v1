@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { Suspense, useState, useRef, useEffect } from 'react';
+import { Canvas, useLoader } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import {
   Scroll,
@@ -14,7 +14,7 @@ import {
   OrbitControls,
   PositionalAudio,
 } from '@react-three/drei';
-
+import { AudioLoader } from 'three';
 import useWindowDimensions from '../components/getWindowDimensions';
 
 import { Dragon } from '../models/Dragon';
@@ -27,9 +27,39 @@ import {
   DepthOfField,
 } from '@react-three/postprocessing';
 import { CirclesWithBar } from 'react-loader-spinner';
+//define a separate type for the ref that includes the stop && play method
+interface PositionalAudioRef
+  extends React.MutableRefObject<typeof PositionalAudio | null> {
+  stop: () => void;
+  play: () => void;
+}
 
 export const Home = () => {
   const { width } = useWindowDimensions();
+  const modalRef = useRef<HTMLInputElement>(null);
+  const audioRef = useRef<PositionalAudioRef>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  //controll modal
+
+  const hideModal = () => modalRef.current?.classList.add('modal__hide');
+  const showModal = () => modalRef.current?.classList.remove('modal__hide');
+  setIsPlaying;
+  const handleButtonClick = () => {
+    setIsPlaying(!isPlaying);
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef?.current.stop();
+      } else {
+        audioRef?.current.play();
+      }
+    }
+  };
+
+  useEffect(() => {
+    console.log(modalRef);
+  });
+
   const container = {
     initial: {
       opacity: 0,
@@ -160,22 +190,44 @@ export const Home = () => {
               enableZoom={false}
               enablePan={false}
             />
-            <PositionalAudio autoplay loop url={ForestSound} distance={20} />
+            {/* sound effects */}
+            <PositionalAudio url={ForestSound} ref={audioRef} distance={20} />
           </Scroll>
 
           <Scroll html>
+            {/* left side bar */}
+            <div className="home__left-side-bar">
+              <img src="https://www.codewars.com/users/jabjab/badges/micro" />
+              <p
+                onClick={showModal}
+                style={{
+                  color: 'yellow',
+                }}
+              >
+                Quick overflow
+              </p>
+              <button onClick={handleButtonClick}>
+                {isPlaying ? 'Stop' : 'Play'}
+              </button>
+            </div>
             <motion.div
               id="home"
               variants={container}
               initial="initial"
               animate="visible"
               exit="exit"
+              onClick={hideModal}
             >
-              <img
-                src="https://www.codewars.com/users/jabjab/badges/micro"
-                style={{ position: 'fixed', top: 10, left: 10 }}
-              />
+              {/* quick info---modal */}
 
+              <div className="modal modal__hide" ref={modalRef}>
+                <div className="modal__close-button" onClick={hideModal}>
+                  X
+                </div>
+                <section className="top__projects"></section>
+                <section className="real__projects"></section>
+              </div>
+              {/* left side bar */}
               <motion.div
                 id="home_title"
                 animate={{ fontSize: 50, color: '#f8e112' }}

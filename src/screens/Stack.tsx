@@ -48,7 +48,7 @@ export const Stack = () => {
     >
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <h3 style={{ color: 'yellow' }}>
-          Here are some techniques which I have touched on in
+          Here are some techniques which I use
         </h3>
         <div id="skills_container">
           {skills.map((item, key) => (

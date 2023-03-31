@@ -52,7 +52,7 @@ export const Header = () => {
     },
   };
 
-  const routes = ['/', 'cv', 'about', 'projects', 'play'];
+  const routes = ['/', 'cv', 'about', 'projects', 'stack'];
 
   return (
     <>

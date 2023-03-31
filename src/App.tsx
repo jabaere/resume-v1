@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import './index.css';
 import { Home } from './screens/Home';
 import { About } from './screens/About';
-import { Dashboard } from './screens/Dashboard';
+import { Stack } from './screens/Stack';
 import { Cv } from './screens/Cv';
 import { Projects } from './screens/Projects';
 import { Header } from './components/Header';
@@ -42,7 +42,7 @@ function App() {
             <Route key="cv" path="/cv" element={<Cv />} />
             <Route key="about" path="/about" element={<About />} />
             <Route key="projects" path="/projects" element={<Projects />} />
-            <Route key="play" path="/play" element={<Dashboard />} />
+            <Route key="stack" path="/stack" element={<Stack />} />
           </Routes>
         </AnimatePresence>
         <Analytics />

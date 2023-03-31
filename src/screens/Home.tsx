@@ -44,7 +44,8 @@ export const Home = () => {
 
   const hideModal = () => modalRef.current?.classList.add('modal__hide');
   const showModal = () => modalRef.current?.classList.remove('modal__hide');
-  setIsPlaying;
+
+  //handle sound on/off
   const handleButtonClick = () => {
     setIsPlaying(!isPlaying);
     if (audioRef.current) {

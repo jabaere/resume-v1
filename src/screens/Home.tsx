@@ -16,7 +16,7 @@ import {
 } from '@react-three/drei';
 import { AudioLoader } from 'three';
 import useWindowDimensions from '../components/getWindowDimensions';
-
+import ModalTabs from '../components/ModalTabs';
 import { Dragon } from '../models/Dragon';
 import { Forest } from '../models/Forest';
 import ForestSound from '../sound/Forest-campfire.mp3';
@@ -207,6 +207,7 @@ export const Home = () => {
               >
                 Quick overflow
               </p>
+
               <button onClick={handleButtonClick}>
                 {isPlaying ? 'Stop' : 'Play'}
               </button>
@@ -217,7 +218,7 @@ export const Home = () => {
               initial="initial"
               animate="visible"
               exit="exit"
-              onClick={hideModal}
+              // onClick={hideModal}
             >
               {/* quick info---modal */}
 
@@ -225,6 +226,7 @@ export const Home = () => {
                 <div className="modal__close-button" onClick={hideModal}>
                   X
                 </div>
+                <ModalTabs />
                 <section className="top__projects"></section>
                 <section className="real__projects"></section>
               </div>

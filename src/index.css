@@ -209,6 +209,13 @@ button {
   border-radius: 8px;
   position: absolute;
   top: 0;
+  overflow-y: auto;
+}
+.card__container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 .home__left-side-bar {
@@ -237,6 +244,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 /* -----cv----- */
 
@@ -294,5 +302,10 @@ button {
 
   #project_list_a {
     display: table-cell;
+  }
+  .card__container {
+    grid-template-columns: 1fr !important;
+    padding-left: 0px !important;
+    padding-top: 30px !important;
   }
 }

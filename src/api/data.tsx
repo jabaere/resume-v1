@@ -244,3 +244,74 @@ export const links = [
   'https://jabaere.github.io/quote/',
   'https://jabaere.github.io/javascriptdocs/',
 ];
+
+export const realProjectData = [
+  {
+    name: 'Cloudpillow, E-commerce store',
+    site: 'www.yourcloudpillow.com',
+    description:
+      'Site was built using Shopify, a leading e-commerce platform, and liquid, a powerful templating language that makes customizing site a breeze. The use of Tailwind CSS ensures that site is visually appealing and responsive across all devices.',
+    imageUrl: '/apiImages/Cloudpillow-1.png',
+  },
+];
+
+export const showcaseData = [
+  {
+    name: 'Tv-kills, Landing page',
+    site: 'tvlandingpage.vercel.app',
+    description:
+      'Page built using React, MUI, and AOS libraries. page is designed to provide user with a dynamic and engaging experience, showcasing product or service in the best possible light.',
+    imageUrl: '/apiImages/tv-kills-1.png',
+  },
+  {
+    name: 'Magicmassage, E-commerce store',
+    site: 'landing-page-jabaere.vercel.app',
+    description: 'Page built using JavaScript, JS modules, and CSS',
+    imageUrl: '/apiImages/magicmassage-1.png',
+  },
+  {
+    name: 'LongStayVilla, Android app',
+    site: 'snack.expo.dev/@jabaere/github.com-jabaere-longstayvilla',
+    description:
+      " React Native app for searching and booking villas. App is optimized for mobile devices, Whether you're using an iPhone or an Android device, you'll be able to easily search for villas, view property details, and book your stay with just a few taps",
+    imageUrl: '/apiImages/villa.png',
+  },
+];
+
+export const otherProjectsData = [
+  {
+    name: 'read-in-three, fun page',
+    site: 'read-in-three.vercel.app',
+    description:
+      'Page built using React, Three.js, and GLSL shaders. Our page is designed to provide you with a fun and engaging experience, featuring interactive graphics and animations that are sure to capture your imagination.',
+    imageUrl: '/apiImages/read.png',
+  },
+  {
+    name: 'Discover georgia, Landing page',
+    site: 'jabaere.github.io/discovergeorgia',
+    description:
+      "Page built using React and Material UI libraries. Our site is designed to provide you with a sleek and modern user experience, featuring a responsive and intuitive design that's both functional and visually appealing",
+    imageUrl: '/apiImages/Discover-Georgia.png',
+  },
+  {
+    name: 'Url shortener',
+    site: 'web-production-e265.up.railway.app/',
+    description:
+      'Page built using the MERN stack. Page is designed to provide you with a simple and efficient way to shorten your URLs, making it easy to share links with others and keep your online activities organized.',
+    imageUrl: '/apiImages/URL-shortener.png',
+  },
+  {
+    name: 'Statistic page',
+    site: 'statistic-six.vercel.app',
+    description:
+      'Page, built using TypeScript, React, and Next.js. Page is designed to provide you with a simple and flexible platform for exploring and visualizing data',
+    imageUrl: '/apiImages/usa.png',
+  },
+  {
+    name: 'World-info',
+    site: 'jabaere.github.io/worldinfoV2',
+    description:
+      'Page that shows data about countries, built using React and powered by the REST Countries API. Page is designed to provide you with a wealth of information about countries around the world, including population, languages spoken, capital cities, and much more.',
+    imageUrl: '/apiImages/world.png',
+  },
+];

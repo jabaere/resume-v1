@@ -84,8 +84,8 @@ export const Cv = () => {
                 className="hide"
                 ref={hideAddr}
               >
-                45a kavkasioni st <br />
-                Telavi, Kakheti <br />
+                st st st st st <br />
+                ststst, ststst <br />
                 Georgia
               </p>
               <p style={{ fontSize: 12 }} className="hide" ref={hideNumRef}>

@@ -78,7 +78,10 @@ export const Header = () => {
         {routes.map((a, i) => {
           return (
             <motion.a
-              onClick={() => navigate(`${a}`)}
+              onClick={() => {
+                setOpen(false);
+                return navigate(`${a}`);
+              }}
               variants={navigationVariant}
               whileHover="hover"
               key={i}

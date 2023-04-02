@@ -65,7 +65,11 @@ export const About = () => {
         />
       </div>
       <div>
-        <h1 id="present_title" style={{ color: 'yellow' }}>
+        <h1
+          id="present_title"
+          style={{ color: 'yellow' }}
+          className="colored__titles"
+        >
           Hello My name is jaba
         </h1>
         <motion.p
@@ -75,6 +79,7 @@ export const About = () => {
           id="present_word"
           style={{ letterSpacing: 0.5 }}
           dangerouslySetInnerHTML={sanitizedData()}
+          className="colored__paragraphs"
         ></motion.p>
       </div>
     </motion.div>

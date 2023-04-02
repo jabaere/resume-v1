@@ -7,17 +7,16 @@ Source: https://sketchfab.com/3d-models/animated-dragon-three-motion-loops-eca98
 Title: Animated Dragon Three Motion Loops
 */
 
-import React, { useRef, useEffect } from "react";
-import { useGLTF, useAnimations } from "@react-three/drei";
+import React, { useRef, useEffect } from 'react';
+import { useGLTF, useAnimations } from '@react-three/drei';
 
 export function Dragon(props) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF(
-    "./models/dragon/scene-transformed.glb"
+    './models/dragon/scene-transformed.glb'
   );
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
-    console.log(actions);
     actions.Flying.timeScale = 0.8;
     actions.Flying.play();
   });
@@ -52,4 +51,4 @@ export function Dragon(props) {
   );
 }
 
-useGLTF.preload("./models/dragon/scene-transformed.glb");
+useGLTF.preload('./models/dragon/scene-transformed.glb');

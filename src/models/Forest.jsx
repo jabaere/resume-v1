@@ -17,7 +17,6 @@ export function Forest(props) {
   );
   const { actions } = useAnimations(animations, group);
   useEffect(() => {
-    console.log(actions['Take 001']);
     // actions.Flying.timeScale = 0.8;
     // actions.Flying.play();
     actions['Take 001'].play();

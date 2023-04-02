@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from 'react';
 
 interface IThemeContext {
   hexColorOne: string;
@@ -14,11 +14,11 @@ interface IThemeContext {
 }
 
 const defaultState = {
-  hexColorOne: "",
-  hexColorTwo: "",
-  color1: localStorage.getItem("hexColorOne") || "#000000",
-  color2: localStorage.getItem("hexColorTwo") || "#a9a9a9",
-  resize: localStorage.getItem("resize") || false,
+  hexColorOne: '',
+  hexColorTwo: '',
+  color1: localStorage.getItem('hexColorOne') || '#000000',
+  color2: localStorage.getItem('hexColorTwo') || '#a9a9a9',
+  resize: localStorage.getItem('resize') || false,
   windowWidth: window.innerWidth,
 };
 
@@ -33,13 +33,13 @@ export const ThemeProvider = (props: any) => {
   const [windowWidth, setWindowWidth] = useState(defaultState.windowWidth);
 
   useEffect(() => {
-    window.addEventListener("resize", () => setResize(true));
-    console.log(window.innerWidth);
+    window.addEventListener('resize', () => setResize(true));
+
     if (windowWidth > window.innerWidth) {
       setResize(true);
-      localStorage.setItem("resize", JSON.stringify(true));
+      localStorage.setItem('resize', JSON.stringify(true));
     }
-    const resiz = localStorage.getItem("resize") || resize;
+    const resiz = localStorage.getItem('resize') || resize;
     setResize(resiz);
   }, []);
 
@@ -54,15 +54,15 @@ export const ThemeProvider = (props: any) => {
   const reloadAndSave = () => {
     setColor1(hexColorOne);
     setColor2(hexColorTwo);
-    localStorage.setItem("hexColorTwo", hexColorTwo);
-    localStorage.setItem("hexColorOne", hexColorOne);
+    localStorage.setItem('hexColorTwo', hexColorTwo);
+    localStorage.setItem('hexColorOne', hexColorOne);
   };
 
   const reset = () => {
-    localStorage.setItem("hexColorTwo", "#a9a9a9");
-    localStorage.setItem("hexColorOne", "#000000");
-    setColor1("#000000");
-    setColor2("#a9a9a9");
+    localStorage.setItem('hexColorTwo', '#a9a9a9');
+    localStorage.setItem('hexColorOne', '#000000');
+    setColor1('#000000');
+    setColor2('#a9a9a9');
   };
 
   return (

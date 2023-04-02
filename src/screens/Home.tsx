@@ -1,31 +1,20 @@
-import React, { Suspense, useState, useRef, useEffect } from 'react';
-import { Canvas, useLoader } from '@react-three/fiber';
+import React, { Suspense, useState, useRef } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import {
   Scroll,
   ScrollControls,
-  Html,
-  Environment,
-  Float,
-  Cloud,
-  Stage,
-  Sky,
   Stars,
   OrbitControls,
   PositionalAudio,
 } from '@react-three/drei';
-import { AudioLoader } from 'three';
+
 import useWindowDimensions from '../components/getWindowDimensions';
 import ModalTabs from '../components/ModalTabs';
-import { Dragon } from '../models/Dragon';
+
 import { Forest } from '../models/Forest';
 import ForestSound from '../sound/Forest-campfire.mp3';
-import {
-  Bloom,
-  EffectComposer,
-  Vignette,
-  DepthOfField,
-} from '@react-three/postprocessing';
+import { Bloom, EffectComposer, Vignette } from '@react-three/postprocessing';
 import { CirclesWithBar } from 'react-loader-spinner';
 import { Bookmark, Play, Pause, Linkedin } from 'react-feather';
 //define a separate type for the ref that includes the stop && play method
@@ -36,7 +25,7 @@ interface PositionalAudioRef
 }
 
 export const Home = () => {
-  const { width } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
   const modalRef = useRef<HTMLInputElement>(null);
   const audioRef = useRef<PositionalAudioRef>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -148,7 +137,10 @@ export const Home = () => {
       }
     >
       <Canvas
-        style={{ height: width < 630 ? '100vh' : '93vh' }}
+        style={{
+          height: width < 630 || height > 949 ? '100vh' : '93vh',
+          overflowX: 'hidden',
+        }}
         camera={{ position: [9, -5, 10], fov: 75, near: 1, far: 1000 }}
       >
         {/* <color attach="background" args={["#000"]} /> */}
@@ -233,13 +225,14 @@ export const Home = () => {
                   <Play color="#CCCCCC" size={36} style={iconStyles} />
                 )}
               </div>
-              <Linkedin
-                color="#CCCCCC"
-                size={36}
-                style={iconStyles}
-                href="www.google.ge"
+              <a
+                href="https://www.linkedin.com/in/jaba-kobriashvili"
                 target="blank"
-              />
+                className="colored__a"
+                style={{ padding: 0 }}
+              >
+                <Linkedin color="#CCCCCC" size={36} style={iconStyles} />
+              </a>
             </div>
             <motion.div
               id="home"

@@ -42,7 +42,6 @@ export default function ModalCard({ data }: DataProps) {
             variant="subtitle1"
           >
             {data.site}
-            {console.log(data.site)}
           </Link>
         </Typography>
         <Typography variant="body2" color="text.secondary">

@@ -89,6 +89,7 @@ export const Projects = () => {
             initial="initial"
             whileHover="hover"
             animate="hidden"
+            className="colored__a"
           >
             {item}
           </motion.a>

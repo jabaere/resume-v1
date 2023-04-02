@@ -47,7 +47,7 @@ export const Stack = () => {
       exit="exit"
     >
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <h3 style={{ color: 'yellow' }}>
+        <h3 style={{ color: 'yellow' }} className="colored__titles">
           Here are some techniques which I use
         </h3>
         <div id="skills_container">
@@ -57,6 +57,7 @@ export const Stack = () => {
               animate="visible"
               variants={skillsVariants}
               key={key}
+              className="colored__paragraphs"
             >
               {item}
             </motion.p>

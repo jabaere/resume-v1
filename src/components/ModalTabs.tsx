@@ -59,18 +59,18 @@ export default function ModalTabs() {
         <Tab label="Other projects" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        {realProjectData.map(item => (
-          <ModalCard data={item} />
+        {realProjectData.map((item, index) => (
+          <ModalCard data={item} key={index} />
         ))}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        {showcaseData.map(item => (
-          <ModalCard data={item} />
+        {showcaseData.map((item, index) => (
+          <ModalCard data={item} key={index} />
         ))}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        {otherProjectsData.map(item => (
-          <ModalCard data={item} />
+        {otherProjectsData.map((item, index) => (
+          <ModalCard data={item} key={index} />
         ))}
       </TabPanel>
     </div>

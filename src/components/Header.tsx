@@ -82,6 +82,7 @@ export const Header = () => {
               variants={navigationVariant}
               whileHover="hover"
               key={i}
+              className="colored__a"
             >
               {a === '/' ? 'home' : a}
             </motion.a>

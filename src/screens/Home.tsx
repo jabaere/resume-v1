@@ -27,6 +27,7 @@ import {
   DepthOfField,
 } from '@react-three/postprocessing';
 import { CirclesWithBar } from 'react-loader-spinner';
+import { Bookmark, Play, Pause, Linkedin } from 'react-feather';
 //define a separate type for the ref that includes the stop && play method
 interface PositionalAudioRef
   extends React.MutableRefObject<typeof PositionalAudio | null> {
@@ -57,9 +58,16 @@ export const Home = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(modalRef);
-  });
+  //icon styles
+  const iconStyles = {
+    color: '#CCCCCC',
+    padding: '5px',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    ':hover': {
+      color: 'yellow',
+    },
+  };
 
   const container = {
     initial: {
@@ -171,7 +179,7 @@ export const Home = () => {
           style={{ width: '100%', overflow: 'hidden' }}
         >
           <Scroll>
-            {/* top */}
+            {/* stars */}
             <Stars
               radius={100}
               depth={50}
@@ -181,36 +189,57 @@ export const Home = () => {
               fade
               speed={1}
             />
+            {/* model */}
             <Forest position={[0, 0, 1]} scale={1.5} />
             <OrbitControls
               makeDefault
-              minAzimuthAngle={0}
-              maxAzimuthAngle={Math.PI / 4}
-              minPolarAngle={Math.PI / 5}
-              maxPolarAngle={Math.PI / 3}
+              minAzimuthAngle={-1}
+              maxAzimuthAngle={1.5}
+              minPolarAngle={Math.PI / 2.5}
+              maxPolarAngle={Math.PI / 4}
               enableZoom={false}
               enablePan={false}
             />
             {/* sound effects */}
             <PositionalAudio url={ForestSound} ref={audioRef} distance={20} />
           </Scroll>
-
+          {/* html content */}
           <Scroll html>
             {/* left side bar */}
             <div className="home__left-side-bar">
-              <img src="https://www.codewars.com/users/jabjab/badges/micro" />
-              <p
-                onClick={showModal}
-                style={{
-                  color: 'yellow',
-                }}
+              {/* <img src="https://www.codewars.com/users/jabjab/badges/micro" /> */}
+              <div
+                style={{ display: 'flex', gap: '10px', alignItems: 'center' }}
               >
-                Quick overflow
-              </p>
-
-              <button onClick={handleButtonClick}>
-                {isPlaying ? 'Stop' : 'Play'}
-              </button>
+                <Bookmark
+                  color="#CCCCCC"
+                  size={36}
+                  onClick={showModal}
+                  style={iconStyles}
+                />
+                {/* <p
+                  onClick={showModal}
+                  style={{
+                    color: 'yellow',
+                  }}
+                >
+                  Quick overflow
+                </p> */}
+              </div>
+              <div onClick={handleButtonClick}>
+                {isPlaying ? (
+                  <Pause color="#CCCCCC" size={36} style={iconStyles} />
+                ) : (
+                  <Play color="#CCCCCC" size={36} style={iconStyles} />
+                )}
+              </div>
+              <Linkedin
+                color="#CCCCCC"
+                size={36}
+                style={iconStyles}
+                href="www.google.ge"
+                target="blank"
+              />
             </div>
             <motion.div
               id="home"
@@ -246,8 +275,8 @@ export const Home = () => {
                   Welcome
                 </h1>
                 <motion.p
-                  animate={{ fontSize: 30, color: '#FFD700', opacity: 0.3 }}
-                  transition={{ delay: 2.5, duration: 1.5, ease: 'easeOut' }}
+                  animate={{ fontSize: 30, color: '#FFD700', opacity: 0 }}
+                  transition={{ delay: 2.5, duration: 9.5, ease: 'easeOut' }}
                   id="home_welcome_sub_title"
                   style={{ userSelect: 'none' }}
                 >

@@ -49,13 +49,11 @@ export const Home = () => {
 
   //icon styles
   const iconStyles = {
-    color: '#CCCCCC',
+    backgroundSize: '240%',
     padding: '5px',
     borderRadius: '5px',
     cursor: 'pointer',
-    ':hover': {
-      color: 'yellow',
-    },
+    transition: 'all 0.2s ease-in',
   };
 
   const container = {
@@ -205,6 +203,7 @@ export const Home = () => {
                   size={36}
                   onClick={showModal}
                   style={iconStyles}
+                  className="icon"
                 />
                 {/* <p
                   onClick={showModal}
@@ -217,9 +216,19 @@ export const Home = () => {
               </div>
               <div onClick={handleButtonClick}>
                 {isPlaying ? (
-                  <Pause color="#CCCCCC" size={36} style={iconStyles} />
+                  <Pause
+                    color="#CCCCCC"
+                    size={36}
+                    style={iconStyles}
+                    className="icon"
+                  />
                 ) : (
-                  <Play color="#CCCCCC" size={36} style={iconStyles} />
+                  <Play
+                    color="#CCCCCC"
+                    size={36}
+                    style={iconStyles}
+                    className="icon"
+                  />
                 )}
               </div>
               <a
@@ -228,7 +237,12 @@ export const Home = () => {
                 className="colored__a"
                 style={{ padding: 0 }}
               >
-                <Linkedin color="#CCCCCC" size={36} style={iconStyles} />
+                <Linkedin
+                  color="#CCCCCC"
+                  size={36}
+                  style={iconStyles}
+                  className="icon"
+                />
               </a>
             </div>
             <motion.div

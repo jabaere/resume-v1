@@ -137,10 +137,7 @@ export const Home = () => {
       }
     >
       <Canvas
-        style={{
-          height: width < 630 || height > 900 ? '100vh' : '93vh',
-          overflowX: 'hidden',
-        }}
+        id="canvas"
         camera={{ position: [9, -5, 10], fov: 75, near: 1, far: 1000 }}
       >
         {/* <color attach="background" args={["#000"]} /> */}

@@ -32,7 +32,7 @@ export const About = () => {
 
   const aboutVariants = {
     visible: {
-      opacity: 0.5,
+      opacity: 0.65,
       color: '#DFFF00',
       letterSpacing: 5,
       listStyleType: 'none',

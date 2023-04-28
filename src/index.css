@@ -251,7 +251,7 @@ button {
 .card__container {
   padding: 50px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 10px;
 }
 
@@ -299,6 +299,10 @@ button {
 @media screen and (max-width: 511px) {
   #cv_container {
     width: 350px;
+  }
+  .card__container {
+    padding: 0;
+    margin: 10px;
   }
 }
 @media screen and (max-width: 811px) {

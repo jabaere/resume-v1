@@ -27,7 +27,7 @@ export const Stack = () => {
   };
   const skillsVariants = {
     visible: {
-      opacity: 0.5,
+      opacity: 0.65,
       color: '#DFFF00',
       listStyleType: 'none',
       transition: {

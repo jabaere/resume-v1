@@ -3,10 +3,29 @@ import { motion } from 'framer-motion';
 import { skills } from '../api/data';
 import DownloadButton from '../components/downloadButton';
 import DOMPurify from 'dompurify';
-import { about__text } from '../config/config';
+import {
+  about__text_four,
+  about__text_one,
+  about__text_three,
+  about__text_two,
+} from '../config/config';
+import { GiShakingHands } from 'react-icons/gi';
+import { GiMagnifyingGlass } from 'react-icons/gi';
+import { GiSpellBook } from 'react-icons/gi';
+import { GiAtomCore } from 'react-icons/gi';
+
 export const About = () => {
-  const sanitizedData = () => ({
-    __html: DOMPurify.sanitize(about__text),
+  const sanitizedPOne = () => ({
+    __html: DOMPurify.sanitize(about__text_one),
+  });
+  const sanitizedPTwo = () => ({
+    __html: DOMPurify.sanitize(about__text_two),
+  });
+  const sanitizedPThree = () => ({
+    __html: DOMPurify.sanitize(about__text_three),
+  });
+  const sanitizedPFour = () => ({
+    __html: DOMPurify.sanitize(about__text_four),
   });
   const container = {
     initial: {
@@ -30,20 +49,6 @@ export const About = () => {
     },
   };
 
-  const aboutVariants = {
-    visible: {
-      opacity: 0.65,
-      color: '#DFFF00',
-      letterSpacing: 5,
-      listStyleType: 'none',
-      transition: {
-        delay: 2,
-      },
-    },
-
-    hidden: { opacity: 0 },
-  };
-
   return (
     <motion.div
       id="about"
@@ -52,35 +57,54 @@ export const About = () => {
       animate="visible"
       exit="exit"
     >
-      <div style={{ display: 'flex', flexDirection: 'column', margin: 30 }}>
+      <div style={{ display: 'flex', margin: '10px auto', order: 2 }}>
         <DownloadButton
           file_name="udemy sertificate"
-          buttonTitle="Download sertificate"
+          buttonTitle="Udemy-React native sertificate"
           _url="files/udemy.pdf"
         />
         <DownloadButton
-          file_name="new horizon sertificate"
-          buttonTitle="Download sertificate"
+          file_name="New Horizon sertificate"
+          buttonTitle="Mobile App Development: React Native"
           _url="files/horizon.pdf"
         />
       </div>
       <div>
         <h1
           id="present_title"
-          style={{ color: 'yellow' }}
+          style={{ color: 'yellow', textAlign: 'center' }}
           className="colored__titles"
         >
           Hello My name is jaba
         </h1>
-        <motion.p
-          initial="hidden"
-          animate="visible"
-          variants={aboutVariants}
-          id="present_word"
-          style={{ letterSpacing: 0.5 }}
-          dangerouslySetInnerHTML={sanitizedData()}
-          className="colored__paragraphs"
-        ></motion.p>
+        <div className="about__paragraph-container">
+          <GiAtomCore style={{ color: '#CCCCCC', fontSize: '50px' }} />
+          <p
+            dangerouslySetInnerHTML={sanitizedPOne()}
+            className="colored__paragraphs"
+          ></p>
+        </div>
+        <div className="about__paragraph-container">
+          <GiSpellBook style={{ color: '#CCCCCC', fontSize: '50px' }} />
+          <p
+            dangerouslySetInnerHTML={sanitizedPTwo()}
+            className="colored__paragraphs"
+          ></p>
+        </div>
+        <div className="about__paragraph-container">
+          <GiMagnifyingGlass style={{ color: '#CCCCCC', fontSize: '50px' }} />
+          <p
+            dangerouslySetInnerHTML={sanitizedPThree()}
+            className="colored__paragraphs"
+          ></p>
+        </div>
+        <div className="about__paragraph-container">
+          <GiShakingHands style={{ color: '#CCCCCC', fontSize: '50px' }} />
+          <p
+            dangerouslySetInnerHTML={sanitizedPFour()}
+            className="colored__paragraphs"
+          ></p>
+        </div>
       </div>
     </motion.div>
   );

@@ -12,42 +12,52 @@ export default function ModalCard({ data }: DataProps) {
   //destructuring data
   //  const { name, site, description, imageUrl } = data;
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="Page image"
-        height="170"
-        image={data.imageUrl}
-        loading="lazy"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
-          {data.name}
-        </Typography>
-        <Typography gutterBottom variant="subtitle1" component="div">
-          <Link
-            href={`https://${data.site}`}
-            sx={{
-              color: 'black',
-              padding: 0,
-              textAlign: 'left',
-              textTransform: 'lowercase',
-              '&:hover': {
-                color: 'yellow',
-                fontWeight: 'bold',
-              },
-            }}
-            target="_blank"
-            underline="hover"
+    <Card
+      sx={{
+        maxWidth: 345,
+        boxShadow: '0px 4px 30px 3px rgba(248, 225, 18,0.31)',
+      }}
+    >
+      <Link
+        href={`https://${data.site}`}
+        sx={{
+          color: 'black',
+          padding: 0,
+          textAlign: 'left',
+          textTransform: 'none',
+          '.dd:hover': {
+            color: 'yellow',
+            fontWeight: 'bold',
+          },
+        }}
+        target="_blank"
+        underline="hover"
+        variant="subtitle1"
+      >
+        <CardMedia
+          component="img"
+          alt="Page image"
+          height="170"
+          image={data.imageUrl}
+          loading="lazy"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
+            {data.name}
+          </Typography>
+          <Typography
+            gutterBottom
             variant="subtitle1"
+            component="div"
+            className="dd"
           >
             {data.site}
-          </Link>
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {data.description}
-        </Typography>
-      </CardContent>
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {data.description}
+          </Typography>
+        </CardContent>
+      </Link>
     </Card>
   );
 }

@@ -16,7 +16,8 @@ import { Forest } from '../models/Forest';
 import ForestSound from '../sound/Forest-campfire.mp3';
 import { Bloom, EffectComposer, Vignette } from '@react-three/postprocessing';
 import { CirclesWithBar } from 'react-loader-spinner';
-import { Bookmark, Play, Pause, Linkedin } from 'react-feather';
+import { Play, Pause, Linkedin } from 'react-feather';
+import { GiBookmark } from 'react-icons/gi';
 //define a separate type for the ref that includes the stop && play method
 interface PositionalAudioRef
   extends React.MutableRefObject<typeof PositionalAudio | null> {
@@ -194,27 +195,20 @@ export const Home = () => {
           <Scroll html>
             {/* left side bar */}
             <div className="home__left-side-bar">
-              {/* <img src="https://www.codewars.com/users/jabjab/badges/micro" /> */}
-              <div
-                style={{ display: 'flex', gap: '10px', alignItems: 'center' }}
-              >
-                <Bookmark
+              <img src="https://www.codewars.com/users/jabjab/badges/micro" />
+              <div className="icons_container">
+                <GiBookmark
                   color="#CCCCCC"
                   size={36}
                   onClick={showModal}
                   style={iconStyles}
                   className="icon"
                 />
-                {/* <p
-                  onClick={showModal}
-                  style={{
-                    color: 'yellow',
-                  }}
-                >
-                  Quick overflow
-                </p> */}
+                <p onClick={showModal} className="icons_text">
+                  Projects
+                </p>
               </div>
-              <div onClick={handleButtonClick}>
+              <div onClick={handleButtonClick} className="icons_container">
                 {isPlaying ? (
                   <Pause
                     color="#CCCCCC"
@@ -230,20 +224,23 @@ export const Home = () => {
                     className="icon"
                   />
                 )}
+                <p className="icons_text">Sound On/Off</p>
               </div>
-              <a
-                href="https://www.linkedin.com/in/jaba-kobriashvili"
-                target="blank"
-                className="colored__a"
-                style={{ padding: 0 }}
-              >
-                <Linkedin
-                  color="#CCCCCC"
-                  size={36}
-                  style={iconStyles}
-                  className="icon"
-                />
-              </a>
+              <div className="icons_container">
+                <a
+                  href="https://www.linkedin.com/in/jaba-kobriashvili"
+                  target="blank"
+                  style={{ padding: 0, width: 'auto' }}
+                >
+                  <Linkedin
+                    color="#CCCCCC"
+                    size={36}
+                    style={iconStyles}
+                    className="icon"
+                  />
+                </a>
+                <p className="icons_text">Linkedin Profile</p>
+              </div>
             </div>
             <motion.div
               id="home"
@@ -266,11 +263,11 @@ export const Home = () => {
               {/* left side bar */}
               <motion.div
                 id="home_title"
-                animate={{ fontSize: 50, color: '#f8e112' }}
+                animate={{ fontSize: 50, color: '#f8e112', opacity: 0 }}
                 style={{ letterSpacing: 20, color: 'white' }}
                 transition={{
                   delay: 1.5,
-                  duration: 1.5,
+                  duration: 20,
                   ease: 'easeOut',
                   when: 'beforeChildren',
                 }}

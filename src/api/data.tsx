@@ -175,6 +175,16 @@ export const education = [
   {
     year: 2023,
     name: 'Udemy',
+    title: 'JavaScript Algorithms and Data Structures Masterclass',
+  },
+  {
+    year: 2023,
+    name: 'Udemy',
+    title: 'Advanced CSS and Sass: Flexbox, Grid, Animations and More!',
+  },
+  {
+    year: 2023,
+    name: 'Udemy',
     title: 'The Complete JavaScript Course 2023: From Zero to Expert!',
   },
   {
@@ -250,8 +260,15 @@ export const realProjectData = [
     name: 'Cloudpillow, E-commerce store',
     site: 'www.yourcloudpillow.com',
     description:
-      'Site was built using Shopify, a leading e-commerce platform, and liquid, a powerful templating language that makes customizing site a breeze. The use of Tailwind CSS ensures that site is visually appealing and responsive across all devices.',
+      'Site was built using Shopify, a leading e-commerce platform and liquid, a powerful templating language that makes customizing site a breeze. The use of Tailwind CSS ensures that site is visually appealing and responsive across all devices.',
     imageUrl: '/apiImages/Cloudpillow-1.png',
+  },
+  {
+    name: 'Chelti, E-commerce store',
+    site: 'www.eu.chelti.com/',
+    description:
+      'Site was built using Shopify, a leading e-commerce platform and liquid, a powerful templating language that makes customizing site a breeze. The use of Tailwind CSS ensures that site is visually appealing and responsive across all devices.',
+    imageUrl: '/apiImages/chelti.png',
   },
 ];
 
@@ -273,7 +290,7 @@ export const showcaseData = [
     name: 'LongStayVilla, Android app',
     site: 'snack.expo.dev/@jabaere/github.com-jabaere-longstayvilla',
     description:
-      " React Native app for searching and booking villas. App is optimized for mobile devices, Whether you're using an iPhone or an Android device, you'll be able to easily search for villas, view property details, and book your stay with just a few taps",
+      "React Native app for searching and booking villas. App is optimized for mobile devices, Whether you're using an iPhone or an Android device, you'll be able to easily search for villas, view property details, and book your stay with just a few taps",
     imageUrl: '/apiImages/villa.png',
   },
 ];

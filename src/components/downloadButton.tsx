@@ -1,10 +1,31 @@
-import { saveAs } from "file-saver";
-import React, { FunctionComponent } from "react";
-import { motion } from "framer-motion";
+import { saveAs } from 'file-saver';
+import React, { FunctionComponent } from 'react';
+import { motion } from 'framer-motion';
 type ButtonProps = {
   buttonTitle: string;
   _url: string;
   file_name: string;
+};
+const btn = {
+  initial: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 1.9,
+      duration: 1.5,
+      ease: 'easeOut',
+    },
+  },
+  exit: {
+    y: '-100vw',
+    transition: {
+      ease: 'easeInOut',
+      delay: 1.5,
+      duration: 0.5,
+    },
+  },
 };
 
 const DownloadButton: FunctionComponent<ButtonProps> = ({
@@ -20,23 +41,26 @@ const DownloadButton: FunctionComponent<ButtonProps> = ({
     saveAs(blob, fileName);
   };
   return (
-    <motion.button
-      onClick={()=> {
+    <motion.a
+      onClick={() => {
         let password = prompt('Please enter password');
-        if(password==='enterpassword'){
-          downloadFile()
+        if (password === 'enterpassword') {
+          downloadFile();
+        } else {
+          alert('password not match');
         }
-         else{
-          alert('password not match')
-         }
-        }}
-      style={{ cursor: "pointer", margin: 5, padding: 8 }}
-      whileHover={{ backgroundColor: "#d73b3e"}}
+      }}
+      style={{ cursor: 'pointer', margin: 5, padding: 8, width: 'auto' }}
+      whileHover={{ color: '#DFFF00' }}
       transition={{ duration: 1 }}
-      id='button'
+      variants={btn}
+      initial="initial"
+      animate="visible"
+      exit="exit"
+      id="button"
     >
       {buttonTitle}
-    </motion.button>
+    </motion.a>
   );
 };
 export default DownloadButton;

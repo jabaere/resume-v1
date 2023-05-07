@@ -79,6 +79,8 @@ dd {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 500;
   padding-top: 20px;
+  flex-direction: column;
+  overflow: hidden;
 }
 #projects {
   display: flex;
@@ -109,6 +111,13 @@ dd {
   background-image: linear-gradient(37deg, greenyellow 50%, #0d324d 50%);
 } */
 
+.about__paragraph-container {
+  display: flex;
+  align-items: center;
+
+  padding: 0 50px;
+}
+
 #home_welcome_title {
   font-family: var(--header-font);
   font-weight: 500;
@@ -120,15 +129,23 @@ dd {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0.65;
+  color: #dfff00;
+  letter-spacing: 1px;
+  list-style-type: none;
+  padding: 10px 50px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .colored__titles {
   font-family: var(--header-font);
-  font-size: 3vw;
-  background: -webkit-linear-gradient(250deg, #eee 90%, var(--theme-color) 10%);
+  font-size: 2.3vw;
+  background: -webkit-linear-gradient(250deg, #eee 60%, var(--theme-color) 10%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  align-self: center;
 }
 #button {
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -155,16 +172,16 @@ a {
   font-weight: bold;
   cursor: pointer;
 }
-.icon {
+/* .icon {
   background-image: linear-gradient(
     240deg,
     var(--theme-color) 52%,
     transparent 30%,
     transparent 30%
   ) !important;
-}
+} */
 
-.icon:hover {
+/* .icon:hover {
   background-position: 100%;
   background-image: linear-gradient(
     240deg,
@@ -172,6 +189,22 @@ a {
     transparent 50%,
     transparent 30%
   ) !important;
+} */
+
+.icons_container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.icons_text {
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-align: left;
+  font-family: var(--header-font);
+  font-weight: bold;
+  cursor: pointer;
+  color: #cccccc !important;
 }
 
 #home_title {
@@ -291,8 +324,9 @@ button {
 #skills_container {
   display: flex;
   height: 300px;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
+  padding: 50px 10px;
 }
 
 /* -----about----- */
@@ -303,6 +337,23 @@ button {
   .card__container {
     padding: 0;
     margin: 10px;
+  }
+  #skills_container {
+    flex-direction: column;
+    height: auto;
+  }
+  .about__paragraph-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .colored__paragraphs {
+    padding: 0;
+  }
+  .colored__titles {
+    font-size: 21px;
+  }
+  .about__paragraph-container {
+    padding-top: 15px;
   }
 }
 @media screen and (max-width: 811px) {

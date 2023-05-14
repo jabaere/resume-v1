@@ -275,14 +275,16 @@ export const Home = () => {
                 <h1 id="home_welcome_title" style={{ userSelect: 'none' }}>
                   Welcome
                 </h1>
-                <motion.p
-                  animate={{ fontSize: 30, color: '#FFD700', opacity: 0 }}
-                  transition={{ delay: 2.5, duration: 9.5, ease: 'easeOut' }}
-                  id="home_welcome_sub_title"
-                  style={{ userSelect: 'none' }}
-                >
-                  here is everything about me
-                </motion.p>
+                {width > 521 && (
+                  <motion.p
+                    animate={{ fontSize: 30, color: '#FFD700', opacity: 0 }}
+                    transition={{ delay: 2.5, duration: 9.5, ease: 'easeOut' }}
+                    id="home_welcome_sub_title"
+                    style={{ userSelect: 'none' }}
+                  >
+                    here is everything about me
+                  </motion.p>
+                )}
               </motion.div>
               {/* 
             <motion.div

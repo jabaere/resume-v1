@@ -356,6 +356,9 @@ button {
   .about__paragraph-container {
     padding-top: 15px;
   }
+  .icons_text {
+    font-size: 0.8em;
+  }
 }
 @media screen and (max-width: 811px) {
   #home,

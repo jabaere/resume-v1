@@ -26,17 +26,24 @@ export const skills = [
 
 export const experience = [
   {
+    year: 2023,
+    company: 'Ltd Megobari',
+    city: 'Tbilisi/Remote/Part-time',
+    description: 'Web-development/intern/contract',
+    job: 'My primary responsibilities revolved around creating and customizing web pages, addressing any errors that arose, and meticulously testing the final products to ensure seamless design and optimal functionality.',
+  },
+  {
     year: 2022,
     company: 'www.g-reviews.com',
-    city: 'London',
-    description: 'In this project I have Created:',
+    city: 'London/Remote',
+    description: 'My Task',
     job: 'Search bar module. Forgot password module. Edit profile page. Settings page.',
   },
   {
     year: 2022,
     company: 'Bind App ',
-    city: 'London',
-    description: 'My work in this project::',
+    city: 'London/Remote',
+    description: 'My Taskt',
     job: 'Fix QR scanner crash. Fix bottom Navigation bar(hide then keyboard is active and hide on chat screens). Fix Menu Icons and It’s behavior. Fix Icons(Chinese letters).',
   },
 ];
@@ -73,12 +80,7 @@ export const projects = [
     techniques: 'NextJS/Typescript/CanvasJS/MUI',
     source: 'https://github.com/jabaere/statistic',
   },
-  {
-    year: 2022,
-    name: 'Landing page my-resume',
-    techniques: 'React/Typescript/Framer-motion',
-    source: 'https://github.com/jabaere/resume',
-  },
+
   {
     year: 2022,
     name: 'web App for statements',
@@ -91,36 +93,14 @@ export const projects = [
     techniques: ' React Native/expo',
     source: 'https://snack.expo.dev/@jabaere/github.com-jabaere-longstayvilla',
   },
-  {
-    year: 2022,
-    name: 'My Portfolio',
-    techniques: 'React/Three.js/css3/styled-components',
-    source: 'https://github.com/jabaere/my-portfolio/tree/main',
-  },
-  {
-    year: 2021,
-    name: 'Ecommerce Project',
-    techniques: 'React/graphql/css3',
-    source: 'https://github.com/jabaere/ecommercefront',
-  },
+
   {
     year: 2021,
     name: 'URL shortener MERN',
     techniques: 'React/Mongodb/Express/Node/material-ui/css3',
     source: 'https://github.com/jabaere/urlshortenermern/tree/main',
   },
-  {
-    year: 2021,
-    name: 'Registration form',
-    techniques: 'Javascript/HTML5/CSS3',
-    source: 'https://github.com/jabaere/regform/tree/main',
-  },
-  {
-    year: 2021,
-    name: 'Registration form',
-    techniques: 'React / Material UI/',
-    source: 'https://surveyformla.herokuapp.com/',
-  },
+
   {
     year: 2021,
     name: 'URL Shortener with shrtco.de API ',
@@ -269,6 +249,20 @@ export const realProjectData = [
     description:
       'Site was built using Shopify, a leading e-commerce platform and liquid, a powerful templating language that makes customizing site a breeze. The use of Tailwind CSS ensures that site is visually appealing and responsive across all devices.',
     imageUrl: '/apiImages/chelti.png',
+  },
+  {
+    name: 'Genuine-Reviews',
+    site: 'www.g-reviews.com/',
+    description:
+      'A place where you can share your online experiences with others to make the web a better place.',
+    imageUrl: '/apiImages/Genuine-Reviews.png',
+  },
+  {
+    name: 'Bind',
+    site: 'https://play.google.com/store/apps/details?id=com.bind.app',
+    description:
+      'Bind is your Digital Business Card that connects you with your business associates and clients. It includes secure chat capability and effective networking tools.',
+    imageUrl: '/apiImages/bind.png',
   },
 ];
 

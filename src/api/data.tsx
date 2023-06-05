@@ -154,6 +154,11 @@ export const projects = [
 export const education = [
   {
     year: 2023,
+    name: 'Other',
+    title: 'Next.js 13 Full Course',
+  },
+  {
+    year: 2023,
     name: 'Udemy',
     title: 'JavaScript Algorithms and Data Structures Masterclass',
   },

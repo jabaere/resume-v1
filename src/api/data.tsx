@@ -51,6 +51,12 @@ export const experience = [
 export const projects = [
   {
     year: 2023,
+    name: 'ReviewHub',
+    techniques: 'Next.js/next-auth.js with google provider/Tailwind/MongoDB',
+    source: 'https://github.com/jabaere/moviereview',
+  },
+  {
+    year: 2023,
     name: 'Fun Page',
     techniques: 'React/React Three Fiber/GLSL/Shaders',
     source: 'https://github.com/jabaere/read-in-three',
@@ -219,6 +225,7 @@ export const interests = [
 ];
 
 export const links = [
+  'https://moviereview-jabaere.vercel.app',
   'https://tvlandingpage.vercel.app/',
   'https://read-in-three.vercel.app/',
   'https://landing-page-jabaere.vercel.app/',
@@ -272,6 +279,13 @@ export const realProjectData = [
 ];
 
 export const showcaseData = [
+  {
+    name: 'ReviewHub',
+    site: 'https://moviereview-jabaere.vercel.app',
+    description:
+      'ReviewHub is an exceptional web application that revolutionizes the way users interact and share reviews. Built with Next.js, Tailwind CSS, and MongoDB, this platform provides a seamless and intuitive experience for writing, editing, deleting, and updating reviews. The integration of Next/Auth and the Google provider ensures secure and hassle-free authentication for all users',
+    imageUrl: '/apiImages/moviehub.png',
+  },
   {
     name: 'Tv-kills, Landing page',
     site: 'tvlandingpage.vercel.app',

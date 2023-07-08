@@ -7,7 +7,7 @@ export const about__text_one = `
 export const about__text_two = `
   As a lawyer with a passion for programming, I have pursued my interest in front-end development and have become skilled 
   in a variety of techniques, including JavaScript, HTML, CSS, Three.js, React.js, Next.js, Liquid, Shopify, Framer Motion, and Node.js. 
-  Currently working as a front-end developer intern, I have been able to apply my legal training to identify and solve complex problems in programming.
+  Currently, I am learning dart and flutter..
   `;
 
 export const about__text_three = `

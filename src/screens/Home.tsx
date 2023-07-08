@@ -195,7 +195,10 @@ export const Home = () => {
           <Scroll html>
             {/* left side bar */}
             <div className="home__left-side-bar">
-              <img src="https://www.codewars.com/users/jabjab/badges/micro" />
+              <img
+                src="https://www.codewars.com/users/jabjab/badges/micro"
+                style={{ height: '1.3rem' }}
+              />
               <div className="icons_container">
                 <GiBookmark
                   color="#CCCCCC"

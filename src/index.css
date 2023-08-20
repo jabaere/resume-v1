@@ -351,6 +351,12 @@ button {
 
 /* -----about----- */
 @media screen and (max-width: 511px) {
+  #header_container {
+    margin-top: 50px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
   #cv_container {
     width: 350px;
   }

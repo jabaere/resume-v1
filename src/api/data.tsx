@@ -51,8 +51,15 @@ export const experience = [
 export const projects = [
   {
     year: 2023,
+    name: 'React native shop app',
+    techniques: 'React native/redux-toolkit',
+    source: 'https://github.com/jabaere/coffee_shop-react-native',
+  },
+  {
+    year: 2023,
     name: 'ReviewHub',
-    techniques: 'Next.js/next-auth.js with google provider/Tailwind/MongoDB',
+    techniques:
+      'Next.js/next-auth.js with google provider/Tailwind/MongoDB/Jotai',
     source: 'https://github.com/jabaere/moviereview',
   },
   {
@@ -279,6 +286,13 @@ export const realProjectData = [
 ];
 
 export const showcaseData = [
+  {
+    name: 'React native shop app',
+    site: 'https://github.com/jabaere/coffee_shop-react-native',
+    description:
+      'A coffee shop mobile application using React Native and Redux Toolkit',
+    imageUrl: '/apiImages/coffee.jpg',
+  },
   {
     name: 'ReviewHub',
     site: 'https://moviereview-jabaere.vercel.app',

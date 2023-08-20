@@ -159,7 +159,7 @@ export const Home = () => {
             height={1000}
           />
 
-          <Vignette offset={0.1} darkness={1.5} eskil={false} />
+          <Vignette offset={0.01} darkness={1.3} eskil={false} />
         </EffectComposer>
         <ScrollControls
           pages={1}
@@ -202,7 +202,7 @@ export const Home = () => {
               <div className="icons_container">
                 <GiBookmark
                   color="#CCCCCC"
-                  size={36}
+                  size={26}
                   onClick={showModal}
                   style={iconStyles}
                   className="icon"
@@ -215,14 +215,14 @@ export const Home = () => {
                 {isPlaying ? (
                   <Pause
                     color="#CCCCCC"
-                    size={36}
+                    size={26}
                     style={iconStyles}
                     className="icon"
                   />
                 ) : (
                   <Play
                     color="#CCCCCC"
-                    size={36}
+                    size={26}
                     style={iconStyles}
                     className="icon"
                   />
@@ -237,7 +237,7 @@ export const Home = () => {
                 >
                   <Linkedin
                     color="#CCCCCC"
-                    size={36}
+                    size={26}
                     style={iconStyles}
                     className="icon"
                   />
@@ -264,31 +264,47 @@ export const Home = () => {
                 <section className="real__projects"></section>
               </div>
               {/* left side bar */}
-              <motion.div
-                id="home_title"
-                animate={{ fontSize: 50, color: '#f8e112', opacity: 0 }}
-                style={{ letterSpacing: 20, color: 'white' }}
-                transition={{
-                  delay: 1.5,
-                  duration: 20,
-                  ease: 'easeOut',
-                  when: 'beforeChildren',
-                }}
-              >
-                <h1 id="home_welcome_title" style={{ userSelect: 'none' }}>
-                  Welcome
-                </h1>
-                {width > 521 && (
+              {width > 521 && (
+                <motion.div
+                  id="home_title"
+                  animate={{ fontSize: 50, color: '#000', opacity: 1 }}
+                  style={{
+                    letterSpacing: 2,
+                    color: 'white',
+                    width: '35%',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                    backdropFilter: 'blur(6px)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    padding: '15px',
+                    borderRadius: '4px',
+                    alignSelf: 'flex-end',
+                  }}
+                  transition={{
+                    delay: 1.5,
+                    duration: 20,
+                    ease: 'easeOut',
+                    when: 'beforeChildren',
+                  }}
+                >
                   <motion.p
-                    animate={{ fontSize: 30, color: '#FFD700', opacity: 0 }}
+                    animate={{ fontSize: 18, color: '#000', opacity: 1 }}
                     transition={{ delay: 2.5, duration: 9.5, ease: 'easeOut' }}
                     id="home_welcome_sub_title"
                     style={{ userSelect: 'none' }}
                   >
-                    here is everything about me
+                    Hello, I'm Jaba, a software developer who has
+                    <span className="important"> fallen in love</span> with
+                    programming. Over the past{' '}
+                    <span className="important"> three years</span>, I've been
+                    deeply immersed in studying and{' '}
+                    <span className="important"> practicing programming</span>.
+                    I've also gained several months of work experience and have
+                    successfully completed multiple freelance projects.
                   </motion.p>
-                )}
-              </motion.div>
+                </motion.div>
+              )}
               {/* 
             <motion.div
               variants={ball}

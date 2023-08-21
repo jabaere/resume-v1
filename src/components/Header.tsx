@@ -16,6 +16,8 @@ export const Header = () => {
   const mobileMenuVariant = {
     show: {
       display: width < 630 ? 'block' : 'none',
+      position: 'absolute',
+      zIndex: 1000,
     },
   };
 

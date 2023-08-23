@@ -16,7 +16,7 @@ export const Header = () => {
   const mobileMenuVariant = {
     show: {
       display: width < 630 ? 'block' : 'none',
-      position: 'absolute',
+
       zIndex: 1000,
     },
   };
@@ -58,7 +58,13 @@ export const Header = () => {
 
   return (
     <>
-      <motion.div variants={mobileMenuVariant} animate="show">
+      <motion.div
+        variants={mobileMenuVariant}
+        animate="show"
+        style={
+          width > 630 ? { position: 'relative' } : { position: 'absolute' }
+        }
+      >
         <MobileMenuButton
           width={24}
           height={24}

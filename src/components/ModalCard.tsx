@@ -25,7 +25,7 @@ export default function ModalCard({ data }: DataProps) {
       }}
     >
       <Link
-        href={`https://${data.site}`}
+        href={data.site}
         sx={{
           color: 'black',
           padding: 0,

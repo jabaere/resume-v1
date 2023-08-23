@@ -278,7 +278,7 @@ export const realProjectData = [
   },
   {
     name: 'Bind',
-    site: 'https://play.google.com/store/apps/details?id=com.bind.app',
+    site: 'play.google.com/store/apps/details?id=com.bind.app',
     description:
       'Bind is your Digital Business Card that connects you with your business associates and clients. It includes secure chat capability and effective networking tools.',
     imageUrl: '/apiImages/bind.png',
@@ -288,14 +288,14 @@ export const realProjectData = [
 export const showcaseData = [
   {
     name: 'React native shop app',
-    site: 'https://github.com/jabaere/coffee_shop-react-native',
+    site: 'github.com/jabaere/coffee_shop-react-native',
     description:
       'A coffee shop mobile application using React Native and Redux Toolkit',
     imageUrl: '/apiImages/coffee.jpg',
   },
   {
     name: 'ReviewHub',
-    site: 'https://moviereview-jabaere.vercel.app',
+    site: 'moviereview-jabaere.vercel.app',
     description:
       'ReviewHub is an exceptional web application that revolutionizes the way users interact and share reviews. Built with Next.js, Tailwind CSS, and MongoDB, this platform provides a seamless and intuitive experience for writing, editing, deleting, and updating reviews. The integration of Next/Auth and the Google provider ensures secure and hassle-free authentication for all users',
     imageUrl: '/apiImages/moviehub.png',

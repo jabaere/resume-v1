@@ -21,6 +21,13 @@ export function Forest(props) {
     // actions.Flying.play();
     actions['Take 001'].play();
   });
+  // useEffect(() => {
+  //   if (group.current) {
+  //     group.current.rotation.x = 0.1; // Rotation in radians along the x-axis
+  //     group.current.rotation.y = 1.2; // Rotation in radians along the y-axis
+  //     group.current.rotation.z = 0; // Rotation in radians along the z-axis
+  //   }
+  // }, []);
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">

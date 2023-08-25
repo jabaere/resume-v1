@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MobileMenuButton } from '../components/MobileMenuButton';
 import useWindowDimensions from '../components/getWindowDimensions';
 export const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isOpen, setOpen] = useState(false);
   const { width } = useWindowDimensions();
-
+  console.log(location.pathname);
   const menuButtonStyle = {
     marginLeft: '1rem',
     paddingTop: '1rem',
@@ -42,7 +43,8 @@ export const Header = () => {
     show: {
       opacity: 1,
       x: 0,
-      display: width > 630 || isOpen ? 'flex' : 'none',
+      display:
+        (width > 630 && location.pathname !== '/') || isOpen ? 'flex' : 'none',
 
       transition: {
         type: 'spring',

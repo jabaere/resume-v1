@@ -7,11 +7,12 @@ import {
   Stars,
   OrbitControls,
   PositionalAudio,
+  Text,
 } from '@react-three/drei';
 
 import useWindowDimensions from '../components/getWindowDimensions';
 import ModalTabs from '../components/ModalTabs';
-
+import GradientText from '../components/Material';
 import { Forest } from '../models/Forest';
 import ForestSound from '../sound/Forest-campfire.mp3';
 import { Bloom, EffectComposer, Vignette } from '@react-three/postprocessing';
@@ -137,7 +138,7 @@ export const Home = () => {
     >
       <Canvas
         id="canvas"
-        camera={{ position: [9, -5, 10], fov: 75, near: 1, far: 1000 }}
+        camera={{ position: [7.5, -5, 11], fov: 75, near: 1, far: 1000 }} //9,-5,10
       >
         {/* <color attach="background" args={["#000"]} /> */}
         <ambientLight intensity={1} />
@@ -178,12 +179,13 @@ export const Home = () => {
               speed={1}
             />
             {/* model */}
+            <GradientText />
             <Forest position={[0, 0, 1]} scale={1.5} />
             <OrbitControls
               makeDefault
               minAzimuthAngle={-1}
               maxAzimuthAngle={1.5}
-              minPolarAngle={Math.PI / 2.5}
+              minPolarAngle={Math.PI / 2.4} //2.5 default
               maxPolarAngle={Math.PI / 4}
               enableZoom={false}
               enablePan={false}

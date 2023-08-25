@@ -68,7 +68,7 @@ dd {
   justify-content: center;
   align-items: center;
   flex: 9.5;
-  padding-top: 130px;
+
   width: 100vw;
 }
 
@@ -223,6 +223,7 @@ a {
 
 #home_title {
   text-align: inherit;
+  margin: 10px;
 }
 /*
 a:hover{

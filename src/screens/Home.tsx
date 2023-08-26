@@ -179,7 +179,7 @@ export const Home = () => {
               speed={1}
             />
             {/* model */}
-            <GradientText />
+            {width > 630 ? <GradientText /> : null}
             <Forest position={[0, 0, 1]} scale={1.5} />
             <OrbitControls
               makeDefault

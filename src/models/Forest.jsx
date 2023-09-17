@@ -706,13 +706,13 @@ export function Forest(props) {
                       material={materials.lambert6}
                     />
                   </group>
-                  <group name="polySurface162">
+                  {/* bad tree <group name="polySurface162">
                     <mesh
                       name="polySurface162_lambert6_0"
                       geometry={nodes.polySurface162_lambert6_0.geometry}
                       material={materials.lambert6}
                     />
-                  </group>
+                  </group> */}
                   <group name="polySurface163">
                     <mesh
                       name="polySurface163_lambert6_0"
@@ -720,13 +720,13 @@ export function Forest(props) {
                       material={materials.lambert6}
                     />
                   </group>
-                  <group name="polySurface164">
+                  {/* bad tree <group name="polySurface164">
                     <mesh
                       name="polySurface164_lambert6_0"
                       geometry={nodes.polySurface164_lambert6_0.geometry}
                       material={materials.lambert6}
                     />
-                  </group>
+                  </group> */}
                   <group name="polySurface165">
                     <mesh
                       name="polySurface165_lambert6_0"
@@ -741,7 +741,7 @@ export function Forest(props) {
                       material={materials.lambert6}
                     />
                   </group>
-                  <group
+                  {/* bad tree <group
                     name="polySurface167"
                     position={[-6.11, 0.54, -2.19]}
                     rotation={[3.12, -0.85, 3.11]}
@@ -752,7 +752,7 @@ export function Forest(props) {
                       geometry={nodes.polySurface167_lambert6_0.geometry}
                       material={materials.lambert6}
                     />
-                  </group>
+                  </group> */}
                   <group
                     name="polySurface173"
                     position={[-9.43, 0.61, 0.84]}

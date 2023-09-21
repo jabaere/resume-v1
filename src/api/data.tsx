@@ -232,6 +232,7 @@ export const interests = [
 ];
 
 export const links = [
+  'https://earthmonth.vercel.app/',
   'https://moviereview-jabaere.vercel.app',
   'https://tvlandingpage.vercel.app/',
   'https://read-in-three.vercel.app/',
@@ -286,6 +287,13 @@ export const realProjectData = [
 ];
 
 export const showcaseData = [
+  {
+    name: 'Earth Month',
+    site: 'https://earthmonth.vercel.app',
+    description:
+      'Landing page created using nextjs, framer-motion and Redux Toolkit',
+    imageUrl: '/apiImages/earth-month.jpg',
+  },
   {
     name: 'React native shop app',
     site: 'github.com/jabaere/coffee_shop-react-native',

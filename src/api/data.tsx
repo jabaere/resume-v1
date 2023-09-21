@@ -289,7 +289,7 @@ export const realProjectData = [
 export const showcaseData = [
   {
     name: 'Earth Month',
-    site: 'https://earthmonth.vercel.app',
+    site: 'earthmonth.vercel.app',
     description:
       'Landing page created using nextjs, framer-motion and Redux Toolkit',
     imageUrl: '/apiImages/earth-month.jpg',

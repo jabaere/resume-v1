@@ -26,6 +26,7 @@
     "file-saver": "^2.0.5",
     "framer-motion": "^10.3.1",
     "import": "^0.0.6",
+    "postprocessing": "^6.33.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",

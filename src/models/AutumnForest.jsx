@@ -15,7 +15,9 @@ import { useFrame } from '@react-three/fiber';
 export function AutumnForest(props) {
   const group = useRef();
 
-  const { nodes, materials } = useGLTF('./models/autumnForest/scene.gltf');
+  const { nodes, materials } = useGLTF(
+    './models/autumnForest/scene-transformed.glb'
+  );
   //controll animation speed
   const animationSpeed = 0.4;
 
@@ -50,4 +52,4 @@ export function AutumnForest(props) {
   );
 }
 
-useGLTF.preload('./models/autumnForest/scene.gltf');
+useGLTF.preload('./models/autumnForest/scene-transformed.glb');

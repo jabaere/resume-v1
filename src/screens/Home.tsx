@@ -8,6 +8,7 @@ import {
   OrbitControls,
   PositionalAudio,
   Text,
+  Sparkles,
 } from '@react-three/drei';
 
 import useWindowDimensions from '../components/getWindowDimensions';
@@ -27,6 +28,7 @@ import { BlendFunction } from 'postprocessing';
 import { CirclesWithBar } from 'react-loader-spinner';
 import { Play, Pause, Linkedin } from 'react-feather';
 import { GiBookmark } from 'react-icons/gi';
+import * as THREE from 'three';
 //define a separate type for the ref that includes the stop && play method
 interface PositionalAudioRef
   extends React.MutableRefObject<typeof PositionalAudio | null> {
@@ -189,6 +191,16 @@ export const Home = () => {
             /> */}
             {/* model */}
             {width > 630 ? <GradientText /> : null}
+            <Sparkles
+              count={50}
+              scale={10}
+              size={8}
+              speed={0.6}
+              noise={2}
+              position={[-18, -4, -10]}
+              color={new THREE.Color(1, 1, 0)}
+            />
+
             <AutumnForest position={[0, 0, 2]} rotate={[0, 15.8, 0]} />
             <OrbitControls
               makeDefault

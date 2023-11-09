@@ -29,46 +29,74 @@ const GradientText = () => {
     return canvas;
   }
 
-  function createTextElements(textData) {
-    const spacing = 0.2; // Adjust the desired horizontal spacing here
-    const textElements = [];
-    let xOffset = 0;
-
-    textData.forEach((data, index) => {
-      textElements.push(
-        <Text
-          key={index}
-          position={[xOffset, 0, 0]}
-          fontSize={0.4}
-          {...data}
-          font="./fonts/StickNoBills-Bold.ttf"
-          WebkitTextFillColor="transparent"
-          backgroundClip="text"
-        >
-          <meshStandardMaterial
-            attach="material"
-            color="#DECBA4"
-            map={gradientTexture}
-            transparent
-          />
-          {data.text}
-        </Text>
-      );
-
-      xOffset += 1.5;
-    });
-
-    return textElements;
-  }
-
-  const textData = [
-    { text: 'About', onClick: () => navigate('/about') },
-    { text: 'Cv', onClick: () => navigate('/cv') },
-    { text: 'Projects', onClick: () => navigate('/projects') },
-    { text: 'Stack', onClick: () => navigate('/stack') },
-  ];
-
-  return <group position={[-7, -3.5, 0]}>{createTextElements(textData)}</group>;
+  return (
+    <>
+      <Text3D
+        position={[8.5, 0, 5]}
+        font="./Regular.json"
+        WebkitTextFillColor="transparent"
+        backgroundClip="text"
+        size={0.5}
+        onClick={() => navigate('/about')}
+      >
+        <meshStandardMaterial
+          attach="material"
+          color="#DECBA4"
+          map={gradientTexture}
+          transparent
+        />
+        About
+      </Text3D>
+      <Text3D
+        position={[9, 1, 4]}
+        font="./Regular.json"
+        WebkitTextFillColor="transparent"
+        backgroundClip="text"
+        size={0.5}
+        onClick={() => navigate('/cv')}
+      >
+        <meshStandardMaterial
+          attach="material"
+          color="#DECBA4"
+          map={gradientTexture}
+          transparent
+        />
+        Cv
+      </Text3D>
+      <Text3D
+        position={[9, 2, 2]}
+        font="./Regular.json"
+        WebkitTextFillColor="transparent"
+        backgroundClip="text"
+        size={0.5}
+        onClick={() => navigate('/projects')}
+      >
+        <meshStandardMaterial
+          attach="material"
+          color="#DECBA4"
+          map={gradientTexture}
+          transparent
+        />
+        Projects
+      </Text3D>
+      <Text3D
+        position={[9, 3, 0]}
+        font="./Regular.json"
+        WebkitTextFillColor="transparent"
+        backgroundClip="text"
+        size={0.5}
+        onClick={() => navigate('/stack')}
+      >
+        <meshStandardMaterial
+          attach="material"
+          color="#DECBA4"
+          map={gradientTexture}
+          transparent
+        />
+        Stack
+      </Text3D>
+    </>
+  );
 };
 
 export default GradientText;

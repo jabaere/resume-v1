@@ -8,27 +8,17 @@ import {
   OrbitControls,
   PositionalAudio,
   Text,
-  Sparkles,
 } from '@react-three/drei';
 
 import useWindowDimensions from '../components/getWindowDimensions';
 import ModalTabs from '../components/ModalTabs';
 import GradientText from '../components/Material';
 import { Forest } from '../models/Forest';
-import { AutumnForest } from '../models/AutumnForest';
 import ForestSound from '../sound/Forest-campfire.mp3';
-import {
-  Bloom,
-  EffectComposer,
-  Vignette,
-  Grid,
-} from '@react-three/postprocessing';
-import { BlendFunction } from 'postprocessing';
-
+import { Bloom, EffectComposer, Vignette } from '@react-three/postprocessing';
 import { CirclesWithBar } from 'react-loader-spinner';
 import { Play, Pause, Linkedin } from 'react-feather';
 import { GiBookmark } from 'react-icons/gi';
-import * as THREE from 'three';
 //define a separate type for the ref that includes the stop && play method
 interface PositionalAudioRef
   extends React.MutableRefObject<typeof PositionalAudio | null> {
@@ -41,8 +31,7 @@ export const Home = () => {
   const modalRef = useRef<HTMLInputElement>(null);
   const audioRef = useRef<PositionalAudioRef>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [mode, setMode] = useState(true);
+
   //controll modal
 
   const hideModal = () => modalRef.current?.classList.add('modal__hide');
@@ -147,31 +136,31 @@ export const Home = () => {
         )
       }
     >
-      <Canvas id="canvas">
+      <Canvas
+        id="canvas"
+        camera={{ position: [7.5, -5, 11], fov: 75, near: 1, far: 1000 }} //9,-5,10
+      >
         {/* <color attach="background" args={["#000"]} /> */}
-
-        <ambientLight intensity={0.4} position={[100, -100, 0]} />
-        <directionalLight
-          position={[10, 0, 0]}
-          intensity={0.2}
-          castShadow // Enable shadow casting
+        <ambientLight intensity={1} />
+        <spotLight
+          position={[0, 25, 0]}
+          angle={1.9}
+          penumbra={1}
+          castShadow
+          intensity={1}
           shadow-bias={-0.0001}
         />
 
         {/* add effects */}
         <EffectComposer>
           <Bloom
-            intensity={0.2}
+            intensity={0.2} //2
             luminanceThreshold={0.2}
-            luminanceSmoothing={0.9}
+            luminanceSmoothing={0.9} //0.9
+            height={1000}
           />
-          <Vignette offset={0.01} darkness={0.3} eskil={true} />
-          <Grid
-            blendFunction={mode ? BlendFunction.DST : BlendFunction.HUE} // blend mode //HUE//Darken|DST,
-            scale={0} // grid pattern scale
-            lineWidth={0} // grid pattern line width
-            size={{ width, height }} // overrides the default pass width and height
-          />
+
+          <Vignette offset={0.01} darkness={1.3} eskil={false} />
         </EffectComposer>
         <ScrollControls
           pages={1}
@@ -180,7 +169,7 @@ export const Home = () => {
         >
           <Scroll>
             {/* stars */}
-            {/* <Stars
+            <Stars
               radius={100}
               depth={50}
               count={5000}
@@ -188,32 +177,18 @@ export const Home = () => {
               saturation={0}
               fade
               speed={1}
-            /> */}
+            />
             {/* model */}
             {width > 630 ? <GradientText /> : null}
-            <Sparkles
-              count={50}
-              scale={10}
-              size={8}
-              speed={0.6}
-              noise={2}
-              position={[-18, -4, -10]}
-              color={new THREE.Color(1, 1, 0)}
-            />
-
-            <AutumnForest position={[0, 0, 2]} rotate={[0, 15.8, 0]} />
+            <Forest position={[0, 0, 1]} scale={1.5} />
             <OrbitControls
               makeDefault
               minAzimuthAngle={-1}
-              maxAzimuthAngle={4.5}
-              minPolarAngle={Math.PI / 2} //2.5 default
+              maxAzimuthAngle={1.5}
+              minPolarAngle={Math.PI / 2.4} //2.5 default
               maxPolarAngle={Math.PI / 4}
-              enableZoom={isModalOpen ? false : true}
-              enablePan={true}
-              rotateSpeed={0.15}
-              zoomSpeed={0.4}
-              minDistance={0}
-              maxDistance={5}
+              enableZoom={false}
+              enablePan={false}
             />
             {/* sound effects */}
             <PositionalAudio url={ForestSound} ref={audioRef} distance={20} />
@@ -228,30 +203,27 @@ export const Home = () => {
               />
               <div className="icons_container">
                 <GiBookmark
-                  color="#3E5151"
+                  color="#CCCCCC"
                   size={26}
-                  onClick={() => (showModal(), setIsModalOpen(true))}
+                  onClick={showModal}
                   style={iconStyles}
                   className="icon"
                 />
-                <p
-                  onClick={() => (showModal(), setIsModalOpen(true))}
-                  className="icons_text"
-                >
+                <p onClick={showModal} className="icons_text">
                   Projects
                 </p>
               </div>
               <div onClick={handleButtonClick} className="icons_container">
                 {isPlaying ? (
                   <Pause
-                    color="#3E5151"
+                    color="#CCCCCC"
                     size={26}
                     style={iconStyles}
                     className="icon"
                   />
                 ) : (
                   <Play
-                    color="#3E5151"
+                    color="#CCCCCC"
                     size={26}
                     style={iconStyles}
                     className="icon"
@@ -266,7 +238,7 @@ export const Home = () => {
                   style={{ padding: 0, width: 'auto' }}
                 >
                   <Linkedin
-                    color="#3E5151"
+                    color="#CCCCCC"
                     size={26}
                     style={iconStyles}
                     className="icon"
@@ -274,22 +246,6 @@ export const Home = () => {
                 </a>
                 <p className="icons_text">Linkedin Profile</p>
               </div>
-            </div>
-            {/* forest color */}
-            <div className="icons_container">
-              <p
-                className="icons_text"
-                style={{
-                  fontSize: '14px',
-                  textTransform: 'capitalize',
-                  fontWeight: 'lighter',
-                  padding: '15px',
-                  paddingTop: '35px',
-                }}
-                onClick={() => setMode(!mode)}
-              >
-                {mode ? 'Late Autumn' : 'Autumn'}
-              </p>
             </div>
             <motion.div
               id="home"
@@ -302,10 +258,7 @@ export const Home = () => {
               {/* quick info---modal */}
 
               <div className="modal modal__hide" ref={modalRef}>
-                <div
-                  className="modal__close-button"
-                  onClick={() => (hideModal(), setIsModalOpen(false))}
-                >
+                <div className="modal__close-button" onClick={hideModal}>
                   X
                 </div>
                 <ModalTabs />
@@ -373,10 +326,3 @@ export const Home = () => {
     </Suspense>
   );
 };
-
-/*
-
-// 
-
-
-*/

@@ -295,6 +295,13 @@ export const showcaseData = [
     imageUrl: '/apiImages/earth-month.jpg',
   },
   {
+    name: 'Woodhouse',
+    site: 'https://woodshop-kappa.vercel.app/',
+    description:
+      'Landing page created using nextjs, framer-motion and Redux Toolkit',
+    imageUrl: '/apiImages/wood.png',
+  },
+  {
     name: 'React native shop app',
     site: 'github.com/jabaere/coffee_shop-react-native',
     description:

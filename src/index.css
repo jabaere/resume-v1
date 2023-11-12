@@ -217,8 +217,8 @@ a {
   font-family: var(--header-font);
   font-weight: bold;
   cursor: pointer;
-  /* color: #cccccc !important; */
-  color: #3e5151 !important;
+  color: #cccccc !important;
+  /* color: #3e5151 !important; */
   opacity: 0.9;
   user-select: none;
 }

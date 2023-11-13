@@ -510,13 +510,13 @@ export function Forest(props) {
                       material={materials.lambert6}
                     />
                   </group>
-                  <group name="polySurface133">
+                  {/* <group name="polySurface133">
                     <mesh
                       name="polySurface133_lambert6_0"
                       geometry={nodes.polySurface133_lambert6_0.geometry}
                       material={materials.lambert6}
                     />
-                  </group>
+                  </group> */}
                   <group name="polySurface134">
                     <mesh
                       name="polySurface134_lambert6_0"
@@ -3171,4 +3171,4 @@ export function Forest(props) {
   );
 }
 
-useGLTF.preload('./modes/forest/scene-transformed.glb');
+useGLTF.preload('./models/forest/scene-transformed.glb');

@@ -160,7 +160,7 @@ export const Home = () => {
             height={1000}
           />
 
-          <Vignette offset={0.01} darkness={1.3} eskil={false} />
+          <Vignette offset={0.001} darkness={1.12} eskil={false} />
         </EffectComposer>
         <ScrollControls
           pages={1}

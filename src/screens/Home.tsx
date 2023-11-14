@@ -19,6 +19,7 @@ import { Bloom, EffectComposer, Vignette } from '@react-three/postprocessing';
 import { CirclesWithBar } from 'react-loader-spinner';
 import { Play, Pause, Linkedin } from 'react-feather';
 import { GiBookmark } from 'react-icons/gi';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 //define a separate type for the ref that includes the stop && play method
 interface PositionalAudioRef
   extends React.MutableRefObject<typeof PositionalAudio | null> {
@@ -191,7 +192,9 @@ export const Home = () => {
               enablePan={false}
             />
             {/* sound effects */}
-            <PositionalAudio url={ForestSound} ref={audioRef} distance={20} />
+            <ErrorBoundary>
+              <PositionalAudio url={ForestSound} ref={audioRef} distance={20} />
+            </ErrorBoundary>
           </Scroll>
           {/* html content */}
           <Scroll html>

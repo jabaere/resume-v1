@@ -1,20 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-export function ErrorBoundary({ children }: any) {
-  const [hasError, setHasError] = useState(false);
+interface ErrorBoundaryProps {
+  children: ReactNode;
+}
 
-  useEffect(() => {
-    setHasError(false);
-  }, [children]);
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
 
-  try {
-    if (hasError) {
-      return <h1>Something went wrong.</h1>;
+export class ErrorBoundary extends Component<
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(_: Error): ErrorBoundaryState {
+    // Update state
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+    console.log("Can't load sound files");
+    console.error(error, errorInfo);
+  }
+
+  render(): ReactNode {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>; // Render an error message
     }
 
-    return children;
-  } catch (error) {
-    console.error(error);
-    setHasError(true);
+    return this.props.children;
   }
 }

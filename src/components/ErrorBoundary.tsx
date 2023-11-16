@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Text } from '@react-three/drei';
+import { Html } from '@react-three/drei';
 interface ErrorBoundaryProps {
   children: ReactNode;
 }
@@ -29,7 +29,21 @@ export class ErrorBoundary extends Component<
 
   render(): ReactNode {
     if (this.state.hasError) {
-      return <Text>Sound unavailable</Text>; // Render an error message
+      return (
+        <Html
+          as="p"
+          fullscreen
+          style={{
+            color: 'orange',
+            marginLeft: '10px',
+            marginTop: '10px',
+            fontFamily: 'Segoe UI',
+            letterSpacing: '0.5px',
+          }}
+        >
+          Sound unavailable!
+        </Html>
+      ); // Render an error message
     }
 
     return this.props.children;

@@ -311,7 +311,7 @@ export const showcaseData = [
     name: 'Ask',
     site: 'ask-henna.verce.app',
     description:
-      'Web app to expand the English vocabulary base',
+      'Web app to expand the English vocabulary base, created using Dart/flutter/rive',
     imageUrl: '/apiImages/Ask.png',
   },
   {

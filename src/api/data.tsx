@@ -51,10 +51,29 @@ export const experience = [
 export const projects = [
   {
     year: 2023,
+    name: 'Ask - generator app',
+    techniques: 'Dart/flutter/rive',
+    source: 'https://github.com/jabaere/Ask',
+  },
+  {
+    year: 2023,
+    name: 'Woodshop',
+    techniques: 'Next.JS/redux-toolkit/Framer-motion/Three.js',
+    source: 'https://github.com/jabaere/woodshop',
+  },
+  {
+    year: 2023,
+    name: 'Earth month',
+    techniques: 'NextJS/redux-toolkit/Framer-motion',
+    source: 'https://github.com/jabaere/earthmonthclone',
+  },
+  {
+    year: 2023,
     name: 'React native shop app',
     techniques: 'React native/redux-toolkit',
     source: 'https://github.com/jabaere/coffee_shop-react-native',
   },
+
   {
     year: 2023,
     name: 'ReviewHub',
@@ -232,6 +251,7 @@ export const interests = [
 ];
 
 export const links = [
+  'https://ask-ten.vercel.app/',
   'https://earthmonth.vercel.app/',
   'https://moviereview-jabaere.vercel.app',
   'https://tvlandingpage.vercel.app/',
@@ -287,6 +307,13 @@ export const realProjectData = [
 ];
 
 export const showcaseData = [
+  {
+    name: 'Ask',
+    site: 'ask-henna.verce.app',
+    description:
+      'Web app to expand the English vocabulary base',
+    imageUrl: '/apiImages/Ask.png',
+  },
   {
     name: 'Earth Month',
     site: 'earthmonth.vercel.app',

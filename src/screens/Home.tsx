@@ -180,7 +180,7 @@ export const Home = () => {
               speed={1}
             />
             {/* model */}
-            {width > 630 ? <GradientText /> : null}
+            {/*width > 630 ? <GradientText /> : null*/}
             <Forest position={[0, 0, 1]} scale={1.5} />
             <OrbitControls
               makeDefault
@@ -200,10 +200,10 @@ export const Home = () => {
           <Scroll html>
             {/* left side bar */}
             <div className="home__left-side-bar">
-              <img
+              {/* <img
                 src="https://www.codewars.com/users/jabjab/badges/micro"
                 style={{ height: '1.3rem' }}
-              />
+              /> */}
               <div className="icons_container">
                 <GiBookmark
                   color="#CCCCCC"
@@ -301,12 +301,12 @@ export const Home = () => {
                   >
                     Hello, I'm Jaba, a software developer who has
                     <span className="important"> fallen in love</span> with
-                    programming. Over the past{' '}
-                    <span className="important"> three years</span>, I've been
-                    deeply immersed in studying and{' '}
-                    <span className="important"> practicing programming</span>.
-                    I've also gained several months of work experience and have
-                    successfully completed multiple freelance projects.
+                    programming. {' '}
+                    <span className="important"> 
+                    If you have a interesing project, I am available to join as a freelancer or contractor. 
+                    Please contact me via LinkedIn profile.
+                    </span>
+                 
                   </motion.p>
                 </motion.div>
               )}

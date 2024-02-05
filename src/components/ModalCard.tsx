@@ -31,13 +31,13 @@ export default function ModalCard({ data }: DataProps) {
           padding: 0,
           textAlign: 'left',
           textTransform: 'none',
+          textDecoration:'none',
           '.dd:hover': {
             color: 'yellow',
-            fontWeight: 'bold',
+            
           },
         }}
         target="_blank"
-        underline="hover"
         variant="subtitle1"
       >
         <CardMedia

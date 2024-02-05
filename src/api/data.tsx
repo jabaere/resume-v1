@@ -277,6 +277,20 @@ export const links = [
 
 export const realProjectData = [
   {
+    name: 'Landing page for consulting firm',
+    site: 'n/a',
+    description:
+      'The site was built using nextjs and tailwind',
+    imageUrl: '/apiImages/money.png',
+  },
+  {
+    name: 'Document generator-SaaS solution',
+    site: 'app-build.click',
+    description:
+      'The application is designed for banks, microfinancial institutes, companies, or individuals to simplify the process of writing applications. Dart/Flutter',
+    imageUrl: '/apiImages/app-build.png',
+  },
+  {
     name: 'Cloudpillow, E-commerce store',
     site: 'www.yourcloudpillow.com',
     description:

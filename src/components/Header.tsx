@@ -67,14 +67,14 @@ export const Header = () => {
           width > 630 ? { position: 'relative' } : { position: 'absolute' }
         }
       >
-        <MobileMenuButton
+        {/* <MobileMenuButton
           width={24}
           height={24}
           color={'yellow'}
           isOpen={isOpen}
           onClick={() => setOpen(!isOpen)}
           style={menuButtonStyle}
-        />
+        /> */}
       </motion.div>
       <motion.div
         id="header_container"

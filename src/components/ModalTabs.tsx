@@ -45,13 +45,19 @@ export default function ModalTabs() {
       <Tabs
         value={value}
         onChange={handleChange}
-        centered
+        allowScrollButtonsMobile
         textColor="inherit"
-        aria-label="secondary tabs example"
+        variant="scrollable"
+        scrollButtons="auto"
+        
         sx={{
+          maxWidth: { xs: 320, sm: 580 }, 
+          paddingLeft:{xs: 0, sm: 50},
           '.MuiTabs-indicator': {
             bgcolor: 'yellow',
-          },
+
+            },
+         
         }}
       >
         <Tab label="Real projects" {...a11yProps(0)} />

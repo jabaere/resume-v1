@@ -278,7 +278,7 @@ export const links = [
 export const realProjectData = [
   {
     name: 'Landing page for consulting firm',
-    site: 'n/a',
+    site: 'landingpageforsupport.vercel.app/',
     description:
       'The site was built using nextjs and tailwind',
     imageUrl: '/apiImages/money.png',
@@ -393,13 +393,13 @@ export const otherProjectsData = [
       "Page built using React and Material UI libraries. Our site is designed to provide you with a sleek and modern user experience, featuring a responsive and intuitive design that's both functional and visually appealing",
     imageUrl: '/apiImages/Discover-Georgia.png',
   },
-  {
-    name: 'Url shortener',
-    site: 'web-production-e265.up.railway.app/',
-    description:
-      'Page built using the MERN stack. Page is designed to provide you with a simple and efficient way to shorten your URLs, making it easy to share links with others and keep your online activities organized.',
-    imageUrl: '/apiImages/URL-shortener.png',
-  },
+  // {
+  //   name: 'Url shortener',
+  //   site: 'web-production-e265.up.railway.app/',
+  //   description:
+  //     'Page built using the MERN stack. Page is designed to provide you with a simple and efficient way to shorten your URLs, making it easy to share links with others and keep your online activities organized.',
+  //   imageUrl: '/apiImages/URL-shortener.png',
+  // },
   {
     name: 'Statistic page',
     site: 'statistic-six.vercel.app',

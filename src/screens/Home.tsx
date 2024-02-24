@@ -294,15 +294,15 @@ export const Home = () => {
                   }}
                 >
                   <motion.p
-                    animate={{ fontSize: 18, color: '#000', opacity: 1 }}
+                    animate={{ fontSize: 18, color: '#000', opacity: 1, lineHeight:1.5 }}
                     transition={{ delay: 2.5, duration: 9.5, ease: 'easeOut' }}
                     id="home_welcome_sub_title"
                     style={{ userSelect: 'none' }}
                   >
-                    Hello, I'm Jaba, a software developer who has
-                    <span className="important"> fallen in love</span> with
+                    Hello, I'm Jaba, a software developer with
+                    <span className="important"> several years of experience</span> in
                     programming. {' '}
-                    <span className="important"> 
+                    <span > 
                     If you have a interesing project, I am available to join as a freelancer or contractor. 
                     Please contact me via LinkedIn profile.
                     </span>

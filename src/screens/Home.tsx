@@ -294,10 +294,11 @@ export const Home = () => {
                   }}
                 >
                   <motion.p
-                    animate={{ fontSize: 18, color: '#000', opacity: 1, lineHeight:1.5 }}
+                    animate={{ fontSize: 18, color: '#FFF', opacity: 1, lineHeight:1.5 }}
                     transition={{ delay: 2.5, duration: 9.5, ease: 'easeOut' }}
                     id="home_welcome_sub_title"
                     style={{ userSelect: 'none' }}
+                    
                   >
                     Hello, I'm Jaba, a software developer with
                     <span className="important"> several years of experience</span> in

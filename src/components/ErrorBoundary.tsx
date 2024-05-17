@@ -39,6 +39,7 @@ export class ErrorBoundary extends Component<
             marginTop: '10px',
             fontFamily: 'Segoe UI',
             letterSpacing: '0.5px',
+            height:'20px'
           }}
         >
           Sound unavailable!

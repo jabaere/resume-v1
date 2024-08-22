@@ -20,7 +20,7 @@ export default function ModalCard({ data }: DataProps) {
           transform: 'scale(0.98)',
           transition: 'all 0.2s ease-in 0.3s',
           delay: 'hidden',
-          boxShadow: '0px 4px 30px 3px rgba(254, 231, 0,0.71)',
+          // boxShadow: '0px 4px 30px 3px rgba(254, 231, 0,0.71)',
         },
       }}
     >

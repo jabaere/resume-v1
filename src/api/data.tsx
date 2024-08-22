@@ -277,31 +277,38 @@ export const links = [
 
 export const realProjectData = [
   {
-    name: 'Landing page for consulting firm',
+    name: 'Lawtalkcentral',
+    site: 'lawtalkcentral.online/',
+    description:
+      'Legal support platform',
+    imageUrl: '/apiImages/www.lawtalkcentral.online.png',
+  },
+  {
+    name: 'landingpageforsupport',
     site: 'landingpageforsupport.vercel.app/',
     description:
-      'The site was built using nextjs and tailwind',
+      'Landing page for consulting firm',
     imageUrl: '/apiImages/money.png',
   },
   {
-    name: 'Document generator-SaaS solution',
+    name: 'Document generator',
     site: 'app-build.click',
     description:
       'The application is designed for banks, microfinancial institutes, companies, or individuals to simplify the process of writing applications. Dart/Flutter',
     imageUrl: '/apiImages/app-build.png',
   },
   {
-    name: 'Cloudpillow, E-commerce store',
+    name: 'Cloudpillow',
     site: 'www.yourcloudpillow.com',
     description:
-      'Site was built using Shopify, a leading e-commerce platform and liquid, a powerful templating language that makes customizing site a breeze. The use of Tailwind CSS ensures that site is visually appealing and responsive across all devices.',
+      'E-commerce store',
     imageUrl: '/apiImages/Cloudpillow-1.png',
   },
   {
-    name: 'Chelti, E-commerce store',
+    name: 'Chelti',
     site: 'www.eu.chelti.com/',
     description:
-      'Site was built using Shopify, a leading e-commerce platform and liquid, a powerful templating language that makes customizing site a breeze. The use of Tailwind CSS ensures that site is visually appealing and responsive across all devices.',
+      'E-commerce store',
     imageUrl: '/apiImages/chelti.png',
   },
   {

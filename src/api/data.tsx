@@ -329,12 +329,13 @@ export const realProjectData = [
 
 export const showcaseData = [
   {
-    name: 'Ask',
-    site: 'ask-henna.verce.app',
+    name: 'Tv-kills, Landing page',
+    site: 'tvlandingpage.vercel.app',
     description:
-      'Web app to expand the English vocabulary base, created using Dart/flutter/rive',
-    imageUrl: '/apiImages/Ask.png',
+      'Page built using React, MUI, and AOS libraries. page is designed to provide user with a dynamic and engaging experience, showcasing product or service in the best possible light.',
+    imageUrl: '/apiImages/tv-kills-1.png',
   },
+
   {
     name: 'Earth Month',
     site: 'earthmonth.vercel.app',
@@ -363,13 +364,7 @@ export const showcaseData = [
       'ReviewHub is an exceptional web application that revolutionizes the way users interact and share reviews. Built with Next.js, Tailwind CSS, and MongoDB, this platform provides a seamless and intuitive experience for writing, editing, deleting, and updating reviews. The integration of Next/Auth and the Google provider ensures secure and hassle-free authentication for all users',
     imageUrl: '/apiImages/moviehub.png',
   },
-  {
-    name: 'Tv-kills, Landing page',
-    site: 'tvlandingpage.vercel.app',
-    description:
-      'Page built using React, MUI, and AOS libraries. page is designed to provide user with a dynamic and engaging experience, showcasing product or service in the best possible light.',
-    imageUrl: '/apiImages/tv-kills-1.png',
-  },
+
   {
     name: 'Magicmassage, E-commerce store',
     site: 'landing-page-jabaere.vercel.app',
@@ -386,6 +381,13 @@ export const showcaseData = [
 ];
 
 export const otherProjectsData = [
+  {
+    name: 'Ask',
+    site: 'ask-henna.verce.app',
+    description:
+      'Web app to expand the English vocabulary base, created using Dart/flutter/rive',
+    imageUrl: '/apiImages/Ask.png',
+  },
   {
     name: 'read-in-three, fun page',
     site: 'read-in-three.vercel.app',

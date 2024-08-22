@@ -54,7 +54,7 @@ export const Projects = () => {
     hover: {
       scale: 1.2,
       originX: 0,
-      background: '#f8e112',
+      // background: '#f8e112',
 
       transition: {
         type: 'spring',

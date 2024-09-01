@@ -14,7 +14,7 @@ export default function ModalCard({ data }: DataProps) {
   return (
     <Card
       sx={{
-        maxWidth: 345,
+        width: 345,
         boxShadow: '0px 4px 30px 3px rgba(0, 2, 0,0.71)',
         // '&:hover': {
         //   transform: 'scale(0.98)',

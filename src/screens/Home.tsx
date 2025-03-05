@@ -97,46 +97,35 @@ export const Home = () => {
   //   },
   // };
 
-  return (
-    <Suspense
-      fallback={
-        (
-          <div
-            style={{
-              height: '90vh',
-              width: '100vw',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <CirclesWithBar
-              height="100"
-              width="100"
-              color="#f8e112"
-              wrapperStyle={{ marginLeft: 'auto', marginRight: 'auto' }}
-              wrapperClass=""
-              visible={true}
-              outerCircleColor=""
-              innerCircleColor=""
-              barColor=""
-              ariaLabel="circles-with-bar-loading"
-            />
-          </div>
-        ) || (
-          <h1
-            style={{
-              color: 'yellow',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              fontFamily: 'Stick No Bills',
-            }}
-          >
-            "Loading..."
-          </h1>
-        )
-      }
+  const fallbackContent =  (
+    <div
+      style={{
+        height: '90vh',
+        width: '100vw',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
     >
+      <CirclesWithBar
+        height="100"
+        width="100"
+        color="#f8e112"
+        wrapperStyle={{ marginLeft: 'auto', marginRight: 'auto' }}
+        wrapperClass=""
+        visible={true}
+        outerCircleColor=""
+        innerCircleColor=""
+        barColor=""
+        ariaLabel="circles-with-bar-loading"
+      />
+    </div>
+  );
+  
+
+
+  return (
+    <Suspense fallback={fallbackContent}>
       <Canvas
         id="canvas"
         camera={{ position: [7.5, -5, 11], fov: 75, near: 1, far: 1000 }} //9,-5,10

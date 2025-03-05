@@ -51,6 +51,18 @@ export const experience = [
 export const projects = [
   {
     year: 2023,
+    name: 'Earth month',
+    techniques: 'NextJS/redux-toolkit/Framer-motion',
+    source: 'https://github.com/jabaere/earthmonthclone',
+  },
+  {
+    year: 2022,
+    name: 'Landing Page',
+    techniques: 'React/AOS/Typescript',
+    source: 'https://github.com/jabaere/tvlandingpage',
+  },
+  {
+    year: 2023,
     name: 'Ask - generator app',
     techniques: 'Dart/flutter/rive',
     source: 'https://github.com/jabaere/Ask',
@@ -61,12 +73,7 @@ export const projects = [
     techniques: 'Next.JS/redux-toolkit/Framer-motion/Three.js',
     source: 'https://github.com/jabaere/woodshop',
   },
-  {
-    year: 2023,
-    name: 'Earth month',
-    techniques: 'NextJS/redux-toolkit/Framer-motion',
-    source: 'https://github.com/jabaere/earthmonthclone',
-  },
+
   {
     year: 2023,
     name: 'React native shop app',
@@ -94,12 +101,7 @@ export const projects = [
     source: 'https://github.com/jabaere/landing-page',
   },
 
-  {
-    year: 2022,
-    name: 'Landing Page',
-    techniques: 'React/AOS/Typescript',
-    source: 'https://github.com/jabaere/tvlandingpage',
-  },
+
   {
     year: 2022,
     name: 'AI-9 openai',
@@ -279,8 +281,8 @@ export const realProjectData = [
   {
     name: 'Lawtalkcentral',
     site: 'lawtalkcentral.online/',
-    description:
-      'Legal support platform',
+    description: "",
+      // 'Legal support platform',
     imageUrl: '/apiImages/www.lawtalkcentral.online.png',
   },
   {
@@ -294,7 +296,7 @@ export const realProjectData = [
     name: 'Document generator',
     site: 'app-build.click',
     description:
-      'The application is designed for banks, microfinancial institutes, companies, or individuals to simplify the process of writing applications. Dart/Flutter',
+      'https://app-build.vercel.app/',
     imageUrl: '/apiImages/app-build.png',
   },
   {
@@ -329,25 +331,25 @@ export const realProjectData = [
 
 export const showcaseData = [
   {
-    name: 'Tv-kills, Landing page',
+    name: 'Tv-kills',
     site: 'tvlandingpage.vercel.app',
-    description:
-      'Page built using React, MUI, and AOS libraries. page is designed to provide user with a dynamic and engaging experience, showcasing product or service in the best possible light.',
+    description:"",
+      // 'Page built using React, MUI, and AOS libraries. page is designed to provide user with a dynamic and engaging experience, showcasing product or service in the best possible light.',
     imageUrl: '/apiImages/tv-kills-1.png',
   },
 
   {
     name: 'Earth Month',
     site: 'earthmonth.vercel.app',
-    description:
-      'Landing page created using nextjs, framer-motion and Redux Toolkit',
+    description:"",
+      // 'Landing page created using nextjs, framer-motion and Redux Toolkit',
     imageUrl: '/apiImages/earth-month.jpg',
   },
   {
     name: 'Woodhouse',
     site: 'https://woodshop-kappa.vercel.app/',
-    description:
-      'Landing page created using nextjs, framer-motion and Redux Toolkit',
+    description:"",
+      // 'Landing page created using nextjs, framer-motion and Redux Toolkit',
     imageUrl: '/apiImages/wood.png',
   },
   {
@@ -357,49 +359,49 @@ export const showcaseData = [
       'A coffee shop mobile application using React Native and Redux Toolkit',
     imageUrl: '/apiImages/coffee.jpg',
   },
-  {
-    name: 'ReviewHub',
-    site: 'moviereview-jabaere.vercel.app',
-    description:
-      'ReviewHub is an exceptional web application that revolutionizes the way users interact and share reviews. Built with Next.js, Tailwind CSS, and MongoDB, this platform provides a seamless and intuitive experience for writing, editing, deleting, and updating reviews. The integration of Next/Auth and the Google provider ensures secure and hassle-free authentication for all users',
-    imageUrl: '/apiImages/moviehub.png',
-  },
+  // {
+  //   name: 'ReviewHub',
+  //   site: 'moviereview-jabaere.vercel.app',
+  //   description:"",
+  //     // 'ReviewHub is an exceptional web application that revolutionizes the way users interact and share reviews. Built with Next.js, Tailwind CSS, and MongoDB, this platform provides a seamless and intuitive experience for writing, editing, deleting, and updating reviews. The integration of Next/Auth and the Google provider ensures secure and hassle-free authentication for all users',
+  //   imageUrl: '/apiImages/moviehub.png',
+  // },
 
   {
-    name: 'Magicmassage, E-commerce store',
+    name: 'Magicmassage',
     site: 'landing-page-jabaere.vercel.app',
-    description: 'Page built using JavaScript, JS modules, and CSS',
+    description: "", // 'Page built using JavaScript, JS modules, and CSS',
     imageUrl: '/apiImages/magicmassage-1.png',
   },
-  {
-    name: 'LongStayVilla, Android app',
-    site: 'snack.expo.dev/@jabaere/github.com-jabaere-longstayvilla',
-    description:
-      "React Native app for searching and booking villas. App is optimized for mobile devices, Whether you're using an iPhone or an Android device, you'll be able to easily search for villas, view property details, and book your stay with just a few taps",
-    imageUrl: '/apiImages/villa.png',
-  },
+  // {
+  //   name: 'LongStayVilla, Android app',
+  //   site: 'snack.expo.dev/@jabaere/github.com-jabaere-longstayvilla',
+  //   description:"",
+  //     //"React Native app for searching and booking villas. App is optimized for mobile devices, Whether you're using an iPhone or an Android device, you'll be able to easily search for villas, view property details, and book your stay with just a few taps",
+  //   imageUrl: '/apiImages/villa.png',
+  // },
 ];
 
 export const otherProjectsData = [
   {
     name: 'Ask',
     site: 'ask-henna.verce.app',
-    description:
-      'Web app to expand the English vocabulary base, created using Dart/flutter/rive',
+    description:"",
+      // 'Web app to expand the English vocabulary base, created using Dart/flutter/rive',
     imageUrl: '/apiImages/Ask.png',
   },
   {
     name: 'read-in-three, fun page',
     site: 'read-in-three.vercel.app',
-    description:
-      'Page built using React, Three.js, and GLSL shaders. Our page is designed to provide you with a fun and engaging experience, featuring interactive graphics and animations that are sure to capture your imagination.',
+    description:"",
+      // 'Page built using React, Three.js, and GLSL shaders. Our page is designed to provide you with a fun and engaging experience, featuring interactive graphics and animations that are sure to capture your imagination.',
     imageUrl: '/apiImages/read.png',
   },
   {
     name: 'Discover georgia, Landing page',
     site: 'jabaere.github.io/discovergeorgia',
-    description:
-      "Page built using React and Material UI libraries. Our site is designed to provide you with a sleek and modern user experience, featuring a responsive and intuitive design that's both functional and visually appealing",
+    description: "",
+      // "Page built using React and Material UI libraries. Our site is designed to provide you with a sleek and modern user experience, featuring a responsive and intuitive design that's both functional and visually appealing",
     imageUrl: '/apiImages/Discover-Georgia.png',
   },
   // {
@@ -412,15 +414,15 @@ export const otherProjectsData = [
   {
     name: 'Statistic page',
     site: 'statistic-six.vercel.app',
-    description:
-      'Page, built using TypeScript, React, and Next.js. Page is designed to provide you with a simple and flexible platform for exploring and visualizing data',
+    description: "",
+      // 'Page, built using TypeScript, React, and Next.js. Page is designed to provide you with a simple and flexible platform for exploring and visualizing data',
     imageUrl: '/apiImages/usa.png',
   },
   {
     name: 'World-info',
     site: 'jabaere.github.io/worldinfoV2',
-    description:
-      'Page that shows data about countries, built using React and powered by the REST Countries API. Page is designed to provide you with a wealth of information about countries around the world, including population, languages spoken, capital cities, and much more.',
+    description: "",
+      // 'Page that shows data about countries, built using React and powered by the REST Countries API. Page is designed to provide you with a wealth of information about countries around the world, including population, languages spoken, capital cities, and much more.',
     imageUrl: '/apiImages/world.png',
   },
 ];

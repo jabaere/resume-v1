@@ -261,7 +261,13 @@ export const Home = () => {
               {width > 521 && (
                 <motion.div
                   id="home_title"
-                  animate={{ fontSize: 50, color: '#000', opacity: 1 }}
+                  animate={{
+                    fontSize: 50,
+                    color: ['#000', '#ff00ff', '#00ffff', '#000'], // Color cycle
+                    opacity: 1,
+                    rotate: [0, 10, -10, 0], //rotation
+                    y: [0, -20, 20, 0], // Bounce effect
+                  }}
                   style={{
                     letterSpacing: 2,
                     color: 'white',
@@ -277,26 +283,35 @@ export const Home = () => {
                   }}
                   transition={{
                     delay: 1.5,
-                    duration: 20,
-                    ease: 'easeOut',
-                    when: 'beforeChildren',
+                    duration: 5, 
+                    ease: 'easeInOut',
+                    repeat: Infinity, // Loop the animation forever
+                    repeatType: 'mirror',
                   }}
                 >
                   <motion.p
-                    animate={{ fontSize: 18, color: '#FFF', opacity: 1, lineHeight:1.5 }}
-                    transition={{ delay: 2.5, duration: 9.5, ease: 'easeOut' }}
+                    animate={{
+                      fontSize: 18,
+                      color: ['#FFF', '#ff00ff', '#00ffff', '#FFF'], // Color cycle
+                      opacity: 1,
+                      lineHeight: 1.5,
+                      x: [0, 10, -10, 0], // Slight horizontal movement
+                      scale: [1, 1, 0.9, 1], // Scale up and down
+                    }}
+                    transition={{
+                      delay: 2.5,
+                      duration: 3, // Faster duration for a playful effect
+                      ease: 'easeInOut',
+                      repeat: Infinity, // Loop the animation forever
+                      repeatType: 'mirror',
+                    }}
                     id="home_welcome_sub_title"
                     style={{ userSelect: 'none' }}
-                    
                   >
-                    Hello, I'm Jaba, a software developer with
-                    <span className="important"> several years of experience</span> in
-                    programming. {' '}
-                    <span > 
-                    If you have a interesing project, I am available to join as a freelancer or contractor. 
-                    Please contact me via LinkedIn profile.
+                    <span>
+                      If you have an interesting project, I am available to join as a freelancer or contractor.
+                      Please contact me via LinkedIn profile.
                     </span>
-                 
                   </motion.p>
                 </motion.div>
               )}

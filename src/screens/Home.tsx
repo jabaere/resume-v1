@@ -302,7 +302,7 @@ export const Home = () => {
                       delay: 2.5,
                       duration: 3, // Faster duration for a playful effect
                       ease: 'easeInOut',
-                      repeat: Infinity, // Loop the animation forever
+                      repeat: 3, // Loop the animation forever
                       repeatType: 'mirror',
                     }}
                     id="home_welcome_sub_title"

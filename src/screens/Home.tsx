@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useRef } from 'react';
+import React, { Suspense, useState, useRef, useMemo, useCallback } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import {
@@ -30,7 +30,8 @@ interface PositionalAudioRef
 export const Home = () => {
   const { width, height } = useWindowDimensions();
   const modalRef = useRef<HTMLInputElement>(null);
-  const audioRef = useRef<PositionalAudioRef>(null);
+  // const audioRef = useRef<PositionalAudioRef>(null);
+  const audioRef = useRef<any>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   //controll modal
@@ -39,25 +40,24 @@ export const Home = () => {
   const showModal = () => modalRef.current?.classList.remove('modal__hide');
 
   //handle sound on/off
-  const handleButtonClick = () => {
-    setIsPlaying(!isPlaying);
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef?.current.stop();
-      } else {
-        audioRef?.current.play();
+  const handleButtonClick = useCallback(() => {
+    setIsPlaying(prev => {
+      if (audioRef.current) {
+        prev ? audioRef.current.stop() : audioRef.current.play();
       }
-    }
-  };
+      return !prev;
+    });
+  }, []);
+  
 
   //icon styles
-  const iconStyles = {
+  const iconStyles = useMemo(() => ({
     backgroundSize: '240%',
     padding: '5px',
     borderRadius: '5px',
     cursor: 'pointer',
     transition: 'all 0.2s ease-in',
-  };
+  }), []);
 
   const container = {
     initial: {
@@ -129,6 +129,7 @@ export const Home = () => {
       <Canvas
         id="canvas"
         camera={{ position: [7.5, -5, 11], fov: 75, near: 1, far: 1000 }} //9,-5,10
+        dpr={window.devicePixelRatio < 2 ? 1 : 2}
       >
         {/* <color attach="background" args={["#000"]} /> */}
         <ambientLight intensity={1} />
@@ -221,7 +222,7 @@ export const Home = () => {
                     className="icon"
                   />
                 )}
-                <p className="icons_text">Sound On/Off</p>
+                <p className="icons_text" role="button" tabIndex={0}>Sound On/Off</p>
               </div>
               <div className="icons_container">
                 <a

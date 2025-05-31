@@ -12,13 +12,14 @@ import {
 
 import useWindowDimensions from '../components/getWindowDimensions';
 import ModalTabs from '../components/ModalTabs';
-import GradientText from '../components/Material';
+//import GradientText from '../components/Material';
 import { Forest } from '../models/Forest';
 import ForestSound from '../sound/Forest-campfire.mp3';
 import { Bloom, EffectComposer, Vignette } from '@react-three/postprocessing';
 import { CirclesWithBar } from 'react-loader-spinner';
 import { Play, Pause, Linkedin } from 'react-feather';
 import { GiBookmark } from 'react-icons/gi';
+import { IoMdAnalytics } from "react-icons/io";
 import { ErrorBoundary } from '../components/ErrorBoundary';
 //define a separate type for the ref that includes the stop && play method
 interface PositionalAudioRef
@@ -206,6 +207,22 @@ export const Home = () => {
                   Projects
                 </p>
               </div>
+                <div className="icons_container">
+                <a
+                  href="https://power-bi.bytebriefs.click/"
+                  style={{ padding: 0, width: 'auto' }}
+                  className="icons_container"
+                >
+                  <IoMdAnalytics
+                    color="#CCCCCC"
+                    size={26}
+                    style={iconStyles}
+                    className="icon"
+                  />
+                
+                <p className="icons_text">Power BI</p>
+                </a>
+              </div>
               <div onClick={handleButtonClick} className="icons_container">
                 {isPlaying ? (
                   <Pause
@@ -229,6 +246,7 @@ export const Home = () => {
                   href="https://www.linkedin.com/in/jaba-kobriashvili"
                   target="blank"
                   style={{ padding: 0, width: 'auto' }}
+                  className="icons_container"
                 >
                   <Linkedin
                     color="#CCCCCC"
@@ -236,9 +254,13 @@ export const Home = () => {
                     style={iconStyles}
                     className="icon"
                   />
+                
+                <p className="icons_text">Linkedin </p>
                 </a>
-                <p className="icons_text">Linkedin Profile</p>
               </div>
+                          
+          
+
             </div>
             <motion.div
               id="home"

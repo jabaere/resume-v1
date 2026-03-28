@@ -52,17 +52,76 @@ export default function ModalTabs() {
         
         sx={{
           maxWidth: { xs: 320, sm: 580 }, 
-          paddingLeft:{xs: 0, sm: 50},
+          paddingLeft: { xs: 0, sm: 50 },
+          paddingBottom: 2,
+          borderBottom: '2px solid rgba(255, 255, 255, 0.1)',
+          background: 'linear-gradient(90deg, rgba(0, 255, 255, 0.05), rgba(255, 0, 255, 0.05))',
+          borderRadius: '8px 8px 0 0',
           '.MuiTabs-indicator': {
-            bgcolor: 'yellow',
-
+            height: '3px',
+            background: 'linear-gradient(90deg, #00ffff, #ff00ff)',
+            borderRadius: '3px 3px 0 0',
+            boxShadow: '0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.3)',
+          },
+          '.MuiTabs-scrollButtons': {
+            color: 'rgba(255, 255, 255, 0.6)',
+            '&.Mui-disabled': {
+              opacity: 0.3,
             },
-         
+          },
         }}
       >
-        <Tab label="Real projects" {...a11yProps(0)} />
-        <Tab label="Showcase" {...a11yProps(1)} />
-        <Tab label="Other projects" {...a11yProps(2)} />
+        <Tab 
+          label="Real projects"
+          {...a11yProps(0)}
+          sx={{
+            textTransform: 'none',
+            fontSize: { xs: '0.875rem', sm: '1rem' },
+            fontWeight: value === 0 ? 700 : 500,
+            color: value === 0 ? '#fff' : 'rgba(255, 255, 255, 0.6)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            padding: '12px 20px',
+            minHeight: 'auto',
+            '&:hover': {
+              color: '#fff',
+              backgroundColor: 'rgba(0, 255, 255, 0.1)',
+            },
+          }}
+        />
+        <Tab 
+          label="Showcase"
+          {...a11yProps(1)}
+          sx={{
+            textTransform: 'none',
+            fontSize: { xs: '0.875rem', sm: '1rem' },
+            fontWeight: value === 1 ? 700 : 500,
+            color: value === 1 ? '#fff' : 'rgba(255, 255, 255, 0.6)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            padding: '12px 20px',
+            minHeight: 'auto',
+            '&:hover': {
+              color: '#fff',
+              backgroundColor: 'rgba(255, 0, 255, 0.1)',
+            },
+          }}
+        />
+        <Tab 
+          label="Other projects"
+          {...a11yProps(2)}
+          sx={{
+            textTransform: 'none',
+            fontSize: { xs: '0.875rem', sm: '1rem' },
+            fontWeight: value === 2 ? 700 : 500,
+            color: value === 2 ? '#fff' : 'rgba(255, 255, 255, 0.6)',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            padding: '12px 20px',
+            minHeight: 'auto',
+            '&:hover': {
+              color: '#fff',
+              backgroundColor: 'rgba(0, 255, 255, 0.1)',
+            },
+          }}
+        />
       </Tabs>
       <TabPanel value={value} index={0}>
         {realProjectData.map((item, index) => (

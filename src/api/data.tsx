@@ -278,20 +278,8 @@ export const links = [
 ];
 
 export const realProjectData = [
-  {
-    name: 'Lawtalkcentral',
-    site: 'lawtalkcentral.online/',
-    description: "",
-      // 'Legal support platform',
-    imageUrl: '/apiImages/www.lawtalkcentral.online.png',
-  },
-  {
-    name: 'landingpageforsupport',
-    site: 'landingpageforsupport.vercel.app/',
-    description:
-      'Landing page for consulting firm',
-    imageUrl: '/apiImages/money.png',
-  },
+
+
   {
     name: 'Document generator',
     site: 'app-build.click',

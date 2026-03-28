@@ -285,11 +285,12 @@ export const Home = () => {
                 <motion.div
                   id="home_title"
                   animate={{
-                    fontSize: 50,
-                    color: ['#000', '#ff00ff', '#00ffff', '#000'], // Color cycle
-                    opacity: 1,
-                    rotate: [0, 10, -10, 0], //rotation
-                    y: [0, -20, 20, 0], // Bounce effect
+                    y: [0, -15, 0],
+                    boxShadow: [
+                      '0 0 20px rgba(255, 0, 255, 0)',
+                      '0 0 40px rgba(0, 255, 255, 0.5)',
+                      '0 0 20px rgba(255, 0, 255, 0)',
+                    ],
                   }}
                   style={{
                     letterSpacing: 2,
@@ -299,42 +300,67 @@ export const Home = () => {
                     display: 'flex',
                     alignItems: 'flex-end',
                     backdropFilter: 'blur(6px)',
-                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05))',
                     padding: '15px',
-                    borderRadius: '4px',
+                    borderRadius: '12px',
                     alignSelf: 'flex-end',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
                   }}
                   transition={{
                     delay: 1.5,
-                    duration: 5, 
+                    duration: 4,
                     ease: 'easeInOut',
-                    repeat: Infinity, // Loop the animation forever
-                    repeatType: 'mirror',
+                    repeat: Infinity,
+                    repeatType: 'loop',
                   }}
                 >
                   <motion.p
                     animate={{
-                      fontSize: 18,
-                      color: ['#FFF', '#ff00ff', '#00ffff', '#FFF'], // Color cycle
-                      opacity: 1,
-                      lineHeight: 1.5,
-                      x: [0, 10, -10, 0], // Slight horizontal movement
-                      scale: [1, 1, 0.9, 1], // Scale up and down
+                      opacity: [0.8, 1, 0.8],
+                      textShadow: [
+                        '0 0 10px rgba(0, 255, 255, 0)',
+                        '0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(255, 0, 255, 0.3)',
+                        '0 0 10px rgba(0, 255, 255, 0)',
+                      ],
                     }}
                     transition={{
-                      delay: 2.5,
-                      duration: 3, // Faster duration for a playful effect
+                      delay: 2,
+                      duration: 3.5,
                       ease: 'easeInOut',
-                      repeat: 3, // Loop the animation forever
-                      repeatType: 'mirror',
+                      repeat: Infinity,
+                      repeatType: 'loop',
                     }}
                     id="home_welcome_sub_title"
-                    style={{ userSelect: 'none' }}
+                    style={{
+                      userSelect: 'none',
+                      lineHeight: 1.5,
+                      fontSize: 18,
+                      fontWeight: 500,
+                      background: 'linear-gradient(to right, #00ffff, #ff00ff, #00ffff)',
+                      backgroundSize: '200% auto',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
                   >
-                    <span>
+                    <motion.span
+                      animate={{
+                        backgroundPosition: ['0% center', '100% center', '0% center'],
+                      }}
+                      transition={{
+                        delay: 2,
+                        duration: 3.5,
+                        ease: 'easeInOut',
+                        repeat: Infinity,
+                        repeatType: 'loop',
+                      }}
+                      style={{
+                        display: 'inline-block',
+                      }}
+                    >
                       If you have an interesting project, I am available to join as a freelancer or contractor.
                       Please contact me via LinkedIn profile.
-                    </span>
+                    </motion.span>
                   </motion.p>
                 </motion.div>
               )}

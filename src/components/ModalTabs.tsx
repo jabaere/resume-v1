@@ -59,9 +59,9 @@ export default function ModalTabs() {
           borderRadius: '8px 8px 0 0',
           '.MuiTabs-indicator': {
             height: '3px',
-            background: 'linear-gradient(90deg, #f97316, #facc15)',
+            background: 'linear-gradient(90deg, #c2410c, #f59e0b, #facc15)',
             borderRadius: '3px 3px 0 0',
-            boxShadow: '0 0 15px rgba(249, 115, 22, 0.6), 0 0 30px rgba(250, 204, 21, 0.3)',
+            boxShadow: '0 0 15px rgba(194, 65, 12, 0.6), 0 0 30px rgba(245, 158, 11, 0.3)',
           },
           '.MuiTabs-scrollButtons': {
             color: 'rgba(255, 255, 255, 0.6)',
@@ -84,7 +84,7 @@ export default function ModalTabs() {
             minHeight: 'auto',
             '&:hover': {
               color: '#fff',
-              backgroundColor: 'rgba(249, 115, 22, 0.1)',
+              backgroundColor: 'rgba(194, 65, 12, 0.1)',
             },
           }}
         />
@@ -101,7 +101,7 @@ export default function ModalTabs() {
             minHeight: 'auto',
             '&:hover': {
               color: '#fff',
-              backgroundColor: 'rgba(250, 204, 21, 0.1)',
+              backgroundColor: 'rgba(245, 158, 11, 0.1)',
             },
           }}
         />
@@ -118,7 +118,7 @@ export default function ModalTabs() {
             minHeight: 'auto',
             '&:hover': {
               color: '#fff',
-              backgroundColor: 'rgba(249, 115, 22, 0.1)',
+              backgroundColor: 'rgba(194, 65, 12, 0.1)',
             },
           }}
         />

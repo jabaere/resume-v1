@@ -27,16 +27,16 @@ export const SideBarButton = ({ icon, label, onClick }: SideBarButtonProps) => {
         justifyContent: 'flex-start',
         padding: '12px 16px',
         borderRadius: 10,
-        border: `1px solid ${hovered ? 'rgba(249,115,22,0.4)' : 'rgba(249,115,22,0.2)'}`,
+        border: `1px solid ${hovered ? 'rgba(194, 65, 12, 0.4)' : 'rgba(194, 65, 12, 0.2)'}`,
         backdropFilter: 'blur(8px)',
         cursor: 'pointer',
         marginLeft: 8,
         transition: 'background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease',
         background: hovered
-          ? 'linear-gradient(135deg, rgba(249,115,22,0.15), rgba(250,204,21,0.15))'
-          : 'linear-gradient(135deg, rgba(249,115,22,0.08), rgba(250,204,21,0.08))',
+          ? 'linear-gradient(135deg, rgba(194, 65, 12, 0.15), rgba(245, 158, 11, 0.15))'
+          : 'linear-gradient(135deg, rgba(194, 65, 12, 0.08), rgba(245, 158, 11, 0.08))',
         boxShadow: hovered
-          ? '0 8px 24px rgba(249,115,22,0.2), inset 0 1px 0 rgba(255,255,255,0.2)'
+          ? '0 8px 24px rgba(194, 65, 12, 0.2), inset 0 1px 0 rgba(255,255,255,0.2)'
           : 'none',
       }}
     >
@@ -49,7 +49,7 @@ export const SideBarButton = ({ icon, label, onClick }: SideBarButtonProps) => {
           borderRadius: 8,
           transition: 'transform 0.3s cubic-bezier(0.4,0,0.2,1), filter 0.3s cubic-bezier(0.4,0,0.2,1)',
           transform: hovered ? 'scale3d(1.15,1.15,1) rotate(5deg)' : 'scale3d(1,1,1) rotate(0deg)',
-          filter: hovered ? 'drop-shadow(0 0 15px rgba(249,115,22,0.6))' : 'none',
+          filter: hovered ? 'drop-shadow(0 0 15px rgba(194, 65, 12, 0.6))' : 'none',
         }}
       >
         {icon}
@@ -66,7 +66,7 @@ export const SideBarButton = ({ icon, label, onClick }: SideBarButtonProps) => {
           fontFamily: 'var(--header-font)',
           fontWeight: 600,
           cursor: 'pointer',
-          backgroundImage: 'linear-gradient(135deg, #c2410c 0%, #f97316 60%, #facc15 100%)',
+          backgroundImage: 'linear-gradient(135deg, #c2410c 0%, #f59e0b 50%, #facc15 100%)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',

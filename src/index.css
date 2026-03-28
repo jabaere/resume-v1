@@ -3,7 +3,8 @@
 :root {
   --header-font: 'Stick No Bills', sans-serif;
   --theme-color: #facc15;
-  --theme-alt: #f97316;
+  --theme-alt: #c2410c;
+  --theme-amber: #f59e0b;
 }
 
 body {
@@ -118,7 +119,7 @@ body, h1, h2, h3, h4, figure, blockquote, dl, dd { margin: 0; }
   font-size: 45px;
 }
 .colored__paragraphs {
-  background: -webkit-linear-gradient(19deg, var(--theme-color) 30%, var(--theme-alt) 70%);
+  background: -webkit-linear-gradient(19deg, var(--theme-alt) 0%, var(--theme-amber) 50%, var(--theme-color) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -133,7 +134,7 @@ body, h1, h2, h3, h4, figure, blockquote, dl, dd { margin: 0; }
 .colored__titles {
   font-family: var(--header-font);
   font-size: 2.3vw;
-  background: -webkit-linear-gradient(250deg, var(--theme-alt) 40%, var(--theme-color) 90%);
+  background: -webkit-linear-gradient(250deg, var(--theme-alt) 0%, var(--theme-amber) 50%, var(--theme-color) 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -141,7 +142,7 @@ body, h1, h2, h3, h4, figure, blockquote, dl, dd { margin: 0; }
 }
 #button { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: bold; }
 .colored__a {
-  background: -webkit-linear-gradient(285deg, var(--theme-alt) 30%, var(--theme-color) 70%);
+  background: -webkit-linear-gradient(285deg, var(--theme-alt) 0%, var(--theme-amber) 50%, var(--theme-color) 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

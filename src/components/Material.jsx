@@ -19,9 +19,9 @@ const GradientText = () => {
       canvas.width,
       canvas.height
     );
-    gradient.addColorStop(0, ' #3E5151');
-    //gradient.addColorStop(0.5, '#a1d54f ');
-    gradient.addColorStop(1, '#DECBA4 ');
+    gradient.addColorStop(0, '#c2410c');
+    gradient.addColorStop(0.5, '#f59e0b');
+    gradient.addColorStop(1, '#facc15');
 
     context.fillStyle = gradient;
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -41,7 +41,7 @@ const GradientText = () => {
       >
         <meshStandardMaterial
           attach="material"
-          color="#DECBA4"
+          color="#ffffff"
           map={gradientTexture}
           transparent
         />
@@ -57,7 +57,7 @@ const GradientText = () => {
       >
         <meshStandardMaterial
           attach="material"
-          color="#DECBA4"
+          color="#ffffff"
           map={gradientTexture}
           transparent
         />
@@ -73,7 +73,7 @@ const GradientText = () => {
       >
         <meshStandardMaterial
           attach="material"
-          color="#DECBA4"
+          color="#ffffff"
           map={gradientTexture}
           transparent
         />
@@ -89,7 +89,7 @@ const GradientText = () => {
       >
         <meshStandardMaterial
           attach="material"
-          color="#DECBA4"
+          color="#ffffff"
           map={gradientTexture}
           transparent
         />

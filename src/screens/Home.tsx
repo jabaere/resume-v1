@@ -23,12 +23,12 @@ import { SideBarButton } from '../components/SidebarButton';
 
 // Shared icon color — purely presentational
 const ICON_COLOR = '#CCCCCC';
-const ICON_SIZE  = 26;
+const ICON_SIZE = 26;
 
 export const Home = () => {
   const { width } = useWindowDimensions();
-  const modalRef   = useRef<HTMLInputElement>(null);
-  const audioRef   = useRef<any>(null);
+  const modalRef = useRef<HTMLInputElement>(null);
+  const audioRef = useRef<any>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const hideModal = () => modalRef.current?.classList.add('modal__hide');
@@ -46,7 +46,7 @@ export const Home = () => {
   const containerVariants = {
     initial: { opacity: 0 },
     visible: { opacity: 1, transition: { delay: 0.9, duration: 1.5, ease: 'easeOut' } },
-    exit:    { y: '-100vw', transition: { ease: 'easeInOut', delay: 1.5, duration: 0.5 } },
+    exit: { y: '-100vw', transition: { ease: 'easeInOut', delay: 1.5, duration: 0.5 } },
   };
 
   const fallback = (
@@ -85,7 +85,7 @@ export const Home = () => {
             <Forest position={[0, 0, 1]} scale={1.5} />
             <OrbitControls
               makeDefault
-              minAzimuthAngle={-1}  maxAzimuthAngle={1.5}
+              minAzimuthAngle={-1} maxAzimuthAngle={1.5}
               minPolarAngle={Math.PI / 2.4} maxPolarAngle={Math.PI / 4}
               enableZoom={false} enablePan={false}
             />
@@ -114,8 +114,8 @@ export const Home = () => {
                 label="Sound On/Off"
                 icon={
                   isPlaying
-                    ? <Pause  color={ICON_COLOR} size={ICON_SIZE} />
-                    : <Play   color={ICON_COLOR} size={ICON_SIZE} />
+                    ? <Pause color={ICON_COLOR} size={ICON_SIZE} />
+                    : <Play color={ICON_COLOR} size={ICON_SIZE} />
                 }
                 onClick={handleSoundToggle}
               />
@@ -200,7 +200,7 @@ export const Home = () => {
                       lineHeight: 1.5,
                       fontSize: 18,
                       fontWeight: 500,
-                      backgroundImage: 'linear-gradient(to right, #c2410c 0%, #f97316 35%, #fbbf24 65%, #facc15 100%)',
+                      backgroundImage: 'linear-gradient(to right, #c2410c 0%, #f59e0b 50%, #facc15 100%)',
                       backgroundSize: '200% auto',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',

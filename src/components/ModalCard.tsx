@@ -82,7 +82,7 @@ export default function ModalCard({ data }: DataProps) {
             sx={{
               fontWeight: 700,
               marginBottom: 1,
-              backgroundImage: 'linear-gradient(135deg, #c2410c 0%, #f97316 50%, #facc15 100%)',
+              backgroundImage: 'linear-gradient(135deg, #c2410c 0%, #f59e0b 50%, #facc15 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -95,13 +95,13 @@ export default function ModalCard({ data }: DataProps) {
             variant="subtitle2"
             component="div"
             sx={{
-              color: 'rgba(249, 115, 22, 0.8)',
+              color: 'rgba(194, 65, 12, 0.8)',
               fontSize: '0.85rem',
               fontWeight: 600,
               marginBottom: 1,
               transition: 'color 0.3s ease',
               '&:hover': {
-                color: '#f97316',
+                color: '#c2410c',
               },
             }}
           >

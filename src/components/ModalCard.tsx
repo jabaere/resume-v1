@@ -17,7 +17,7 @@ export default function ModalCard({ data }: DataProps) {
         width: { xs: 300, sm: 380 },
         background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02))',
         backdropFilter: 'blur(10px)',
-        border: '1px solid rgba(0, 255, 255, 0.1)',
+        border: '1px solid rgba(249, 115, 22, 0.1)',
         borderRadius: '12px',
         boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
         transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -27,8 +27,8 @@ export default function ModalCard({ data }: DataProps) {
         flexDirection: 'column',
         '&:hover': {
           transform: 'translateY(-8px)',
-          boxShadow: '0 15px 50px 0 rgba(0, 255, 255, 0.2), 0 0 30px rgba(255, 0, 255, 0.1)',
-          borderColor: 'rgba(0, 255, 255, 0.3)',
+          boxShadow: '0 15px 50px 0 rgba(249, 115, 22, 0.2), 0 0 30px rgba(250, 204, 21, 0.1)',
+          borderColor: 'rgba(249, 115, 22, 0.3)',
           '& #image': {
             transform: 'scale(1.05)',
           },
@@ -82,7 +82,7 @@ export default function ModalCard({ data }: DataProps) {
             sx={{
               fontWeight: 700,
               marginBottom: 1,
-              background: 'linear-gradient(90deg, #00ffff, #ff00ff)',
+              backgroundImage: 'linear-gradient(135deg, #c2410c 0%, #f97316 50%, #facc15 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -95,13 +95,13 @@ export default function ModalCard({ data }: DataProps) {
             variant="subtitle2"
             component="div"
             sx={{
-              color: 'rgba(0, 255, 255, 0.8)',
+              color: 'rgba(249, 115, 22, 0.8)',
               fontSize: '0.85rem',
               fontWeight: 600,
               marginBottom: 1,
               transition: 'color 0.3s ease',
               '&:hover': {
-                color: '#00ffff',
+                color: '#f97316',
               },
             }}
           >

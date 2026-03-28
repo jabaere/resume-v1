@@ -2,55 +2,42 @@
 
 :root {
   --header-font: 'Stick No Bills', sans-serif;
-  --theme-color: #fee715ff;
+  --theme-color: #facc15;
+  --theme-alt: #f97316;
 }
 
 body {
   margin: 0;
+  background-color: #100b1a;
+  color: #f4e8c3;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-image: linear-gradient(300deg, #101820FF 35%, #20A161 150%);*/
 }
+
 #canvas {
-  /* height: calc(100vh - 40px) !important; */
   overflow-x: hidden !important;
   position: absolute;
   z-index: 0;
   height: 100vh !important;
 }
-.important {
-  color: #f8e112;
-  letter-spacing: 1.5px;
-}
+
+.important { color: var(--theme-color); letter-spacing: 1.5px; }
 
 .App {
   min-height: 100vh;
   display: flex;
-  background-color: '#000';
+  background-color: #0e0a16;
   flex-direction: column;
-  /*background-image: linear-gradient(300deg, #101820FF 35%, #FEE715FF  150%);*/
   width: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
+
+body, h1, h2, h3, h4, figure, blockquote, dl, dd { margin: 0; }
 
 #header_container {
   position: absolute;
@@ -60,8 +47,8 @@ dd {
   background-color: transparent;
   z-index: 999999;
 }
-/* home page  */
 
+/* ── Pages ── */
 #home {
   flex-direction: column;
   display: flex;
@@ -69,10 +56,8 @@ dd {
   justify-content: center;
   align-items: center;
   flex: 9.5;
-
   width: 100vw;
 }
-
 #stack {
   flex-direction: column;
   display: flex;
@@ -120,62 +105,52 @@ dd {
   max-height: 90vh;
   margin-top: 50px;
 }
-/* .screen_background {
-  background-color: greenyellow;
-  background-image: linear-gradient(37deg, greenyellow 50%, #0d324d 50%);
-} */
 
+/* ── Typography ── */
 .about__paragraph-container {
   display: flex;
   align-items: center;
-
   padding: 0 50px;
 }
-
 #home_welcome_title {
   font-family: var(--header-font);
   font-weight: 500;
   font-size: 45px;
 }
-
 .colored__paragraphs {
-  background: -webkit-linear-gradient(19deg, #eee 40%, var(--theme-color) 20%);
+  background: -webkit-linear-gradient(19deg, var(--theme-color) 30%, var(--theme-alt) 70%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.65;
-  color: #dfff00;
+  opacity: 0.85;
+  color: transparent;
   letter-spacing: 1px;
   list-style-type: none;
   padding: 10px 50px;
   max-width: 80%;
   margin: 0 auto;
 }
-
 .colored__titles {
   font-family: var(--header-font);
   font-size: 2.3vw;
-  background: -webkit-linear-gradient(250deg, #eee 60%, var(--theme-color) 10%);
+  background: -webkit-linear-gradient(250deg, var(--theme-alt) 40%, var(--theme-color) 90%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   align-self: center;
 }
-#button {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: bold;
-}
+#button { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: bold; }
 .colored__a {
-  background: -webkit-linear-gradient(285deg, #eee 40%, var(--theme-color) 20%);
+  background: -webkit-linear-gradient(285deg, var(--theme-alt) 30%, var(--theme-color) 70%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* home page  */
+/* Global <a> reset — does NOT apply to sidebar buttons (they are <div>s now) */
 a {
   text-decoration: none;
-  color: #ccc;
+  color: var(--theme-alt);
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 0.1em;
@@ -186,68 +161,53 @@ a {
   font-weight: bold;
   cursor: pointer;
 }
-/* .icon {
-  background-image: linear-gradient(
-    240deg,
-    var(--theme-color) 52%,
-    transparent 30%,
-    transparent 30%
-  ) !important;
-} */
 
-/* .icon:hover {
-  background-position: 100%;
-  background-image: linear-gradient(
-    240deg,
-    var(--theme-color) 10%,
-    transparent 50%,
-    transparent 30%
-  ) !important;
-} */
-
-.icons_container {
+/* ── Left sidebar ──
+   NOTE: .icons_container and all icon/text hover rules have been REMOVED.
+   Sidebar button hover is handled entirely inside SideBarButton.tsx
+   via local useState — no CSS involvement whatsoever.              ── */
+.home__left-side-bar {
+   position: fixed; 
+  width: 200px;
   display: flex;
-  gap: 10px;
-  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+   z-index: 999; 
+  pointer-events: auto;
 }
-.icons_text {
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 0.1em;
-  text-align: left;
-  font-family: var(--header-font);
-  font-weight: bold;
-  cursor: pointer;
-  color: #cccccc !important;
-  /* color: #3e5151 !important; */
-  opacity: 0.9;
-  user-select: none;
+.home__left-side-bar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(249,115,22,0.6), transparent);
+  pointer-events: none;
 }
 
+/* ── Home title card ── */
 #home_title {
   text-align: inherit;
   margin: 10px;
+  background: linear-gradient(135deg, rgba(250,204,21,0.1), rgba(249,115,22,0.1)) !important;
+  border: 1.5px solid rgba(250,204,21,0.4) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 8px 32px rgba(249,115,22,0.15), inset 0 1px 0 rgba(255,255,255,0.2) !important;
 }
-/*
-a:hover{
-  letter-spacing: 0.25em;
-}
-
-*/
-
-/*dashboard*/
-form {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
+#home_title:hover {
+  box-shadow: 0 15px 50px rgba(249,115,22,0.3), inset 0 1px 0 rgba(255,255,255,0.2) !important;
+  border-color: rgba(250,204,21,0.6) !important;
+  background: linear-gradient(135deg, rgba(250,204,21,0.2), rgba(249,115,22,0.2)) !important;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-  line-height: 30px;
-  color: aliceblue;
-}
+/* ── Dashboard / Forms ── */
+form { display: flex; gap: 10px; flex-direction: column; }
+label { display: flex; flex-direction: column; line-height: 30px; color: aliceblue; }
 button {
   background-color: #0d324d;
   color: aliceblue;
@@ -257,9 +217,7 @@ button {
   font-weight: bold;
 }
 
-/*dashboard*/
-
-/* -----cv----- */
+/* ── CV ── */
 #cv_container {
   background-color: white;
   width: 750px;
@@ -268,7 +226,6 @@ button {
   overflow: auto;
   max-height: 90vh;
 }
-
 #cv_title {
   color: white;
   letter-spacing: 5px;
@@ -280,30 +237,27 @@ button {
   margin-bottom: 0;
   text-align: center;
 }
+.hide { text-shadow: 0 0 8px #000; color: transparent; }
 
-.hide {
-  text-shadow: 0 0 8px #000;
-  color: transparent;
-}
-
+/* ── Modal ── */
 .modal {
   width: 95vw;
   height: 90vh;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.3);
-  /* display: flex;
-  justify-content: end; */
+  backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, rgba(16,11,26,0.9), rgba(14,10,22,0.9));
+  border: 1.5px solid rgba(250,204,21,0.3);
   z-index: 9999999999;
-  border-radius: 8px;
+  border-radius: 20px;
   position: absolute;
   top: 50px;
   overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-shadow: 0 20px 60px rgba(249,115,22,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+  animation: slideInUp 0.5s cubic-bezier(0.4,0,0.2,1);
 }
-.modal::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
-}
+.modal::-webkit-scrollbar { display: none; }
+
 .card__container {
   padding: 40px 50px;
   display: grid;
@@ -313,138 +267,82 @@ button {
   animation: fadeIn 0.4s ease-in-out;
 }
 
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.home__left-side-bar {
-  position: absolute;
-  left: 10px;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  gap: 40px;
-  justify-content: center;
-}
-
-.modal__hide {
-  display: none;
-  z-index: 0;
-}
-.modal__show {
-  display: flex;
-
-  z-index: 9999999999;
-  opacity: 0.5;
-}
+.modal__hide { display: none; z-index: 0; }
+.modal__show { display: flex; z-index: 9999999999; opacity: 0.5; }
 
 .modal__close-button {
-  width: 46px;
-  height: 46px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, rgba(249,115,22,0.3), rgba(250,204,21,0.2));
+  border: 1px solid rgba(250,204,21,0.4);
+  border-radius: 12px;
+  font-size: 1.5rem;
+  color: #facc15;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: bold;
+  z-index: 10;
 }
-/* -----cv----- */
+.modal__close-button:hover {
+  background: linear-gradient(135deg, rgba(249,115,22,0.5), rgba(250,204,21,0.4));
+  border-color: rgba(250,204,21,0.6);
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 0 20px rgba(249,115,22,0.6);
+}
 
-/* -----about----- */
-
+/* ── Skills ── */
 #skills_container {
   display: flex;
   height: 300px;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   padding: 50px 10px;
 }
 
-/* -----about----- */
+/* ── Responsive ── */
 @media screen and (max-width: 511px) {
   #header_container {
     margin-top: 50px;
     backdrop-filter: blur(6px);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255,255,255,0.2);
     border-radius: 8px;
   }
-  #cv_container {
-    width: 350px;
-  }
-  .card__container {
-    padding: 0;
-    margin: 10px;
-  }
-  #skills_container {
-    flex-direction: column;
-    height: auto;
-  }
-  .about__paragraph-container {
-    flex-direction: column;
-    padding: 0;
-  }
-  .colored__paragraphs {
-    padding: 0;
-  }
-  .colored__titles {
-    font-size: 21px;
-  }
-  .about__paragraph-container {
-    padding-top: 15px;
-  }
-  .icons_text {
-    font-size: 0.8em;
-  }
+  #cv_container { width: 350px; }
+  .card__container { padding: 0; margin: 10px; }
+  #skills_container { flex-direction: column; height: auto; }
+  .about__paragraph-container { flex-direction: column; padding: 0; padding-top: 15px; }
+  .colored__paragraphs { padding: 0; }
+  .colored__titles { font-size: 21px; }
 }
+
 @media screen and (max-width: 811px) {
-  #home,
-  #about,
-  #dashboard,
-  #cv {
-    margin-left: 0;
-  }
-  .App {
-    flex-direction: column;
-    height: auto;
-  }
-  #home_title {
-    text-align: center;
-  }
-  #skills_container {
-    font-size: 11px;
-  }
-
-  #present_word {
-    font-size: 11px;
-  }
-
-  #present_title {
-    font-size: 21px;
-  }
-  #projects {
-    font-size: 12px;
-  }
-  #about {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  #cv_title {
-    width: 100vh;
-  }
-
-  #project_list_a {
-    display: table-cell;
-  }
+  #home, #about, #dashboard, #cv { margin-left: 0; }
+  .App { flex-direction: column; height: auto; }
+  #home_title { text-align: center; }
+  #skills_container { font-size: 11px; }
+  #present_word { font-size: 11px; }
+  #present_title { font-size: 21px; }
+  #projects { font-size: 12px; }
+  #about { flex-direction: column; padding: 20px; }
+  #cv_title { width: 100vh; }
+  #project_list_a { display: table-cell; }
   .card__container {
     grid-template-columns: 1fr !important;
     padding-left: 0px !important;
     padding-top: 30px !important;
   }
 }
-/**/

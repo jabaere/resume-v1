@@ -19,7 +19,7 @@ import { Play, Pause, Linkedin } from 'react-feather';
 import { GiBookmark } from 'react-icons/gi';
 import { IoMdAnalytics } from 'react-icons/io';
 import { ErrorBoundary } from '../components/ErrorBoundary';
-import { SideBarButton } from '../components/SidebarButton';
+import { SideBarButton } from '../components/SideBarButton';
 
 // Shared icon color — purely presentational
 const ICON_COLOR = '#CCCCCC';
